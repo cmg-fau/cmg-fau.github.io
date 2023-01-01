@@ -388,7 +388,7 @@ profile:
     achievements: Achievements
     skills: Skills
     links: Links
-    tsukuba: University of Tsukuba, Center for Computational Sciences, Tennodai 1-1-1, Tsukuba, Ibaraki, Japan 305-8577
+    tsukuba: University of Erlangen-Nürnberg, Center for Computational Sciences, Tennodai 1-1-1, Tsukuba, Ibaraki, Japan 305-8577
     paris: Institut d'Astrophysique Paris, 98 bis Boulevard Arago, 75014 Paris
 
 
@@ -982,9 +982,9 @@ header:
     home: Home
     home_ja: 日本語
     home_en: English
-    title_l: Theoretical Astrophysics
+    title_l: Computational Microscopy
     title_r: Group
-    subtitle: University of Tsukuba, Center for Computational Sciences
+    subtitle: University of Erlangen-Nürnberg, Center for Nanoanalysis and Electron Microscopy
     group: Our Group
     members: *members_short_en
     achievements: *achievements_short_en
@@ -1016,9 +1016,9 @@ header:
     postgrad: &postgrad_en Graduate School
     admission: Theoretical Astrophysics Group
     pas_admission: Graduate School of Pure and Applied Sciences
-    uot_admission: University of Tsukuba
+    uot_admission: University of Erlangen-Nürnberg
     links: Links
-    uot: University of Tsukuba
+    uot: University of Erlangen-Nürnberg
     ccs: Center for Computational Sciences
     ccs_astro: "&nbsp; ↳ Group Introduction Page"
     pas: Graduate School of Pure and Applied Sciences
@@ -1029,7 +1029,7 @@ header:
     asj: Astronomical Society of Japan
     scheduler: CCS R1 Scheduler
     resources: &resources_en Resources
-    uot_calendar: University of Tsukuba Calendar
+    uot_calendar: University of Erlangen-Nürnberg Calendar
     ccs_internal_pages: CCS internal pages
     uot_fair: FAIR accounting system
     ja: 和
@@ -1083,6 +1083,6 @@ footer:
     recent_work: *recent_work_en
     title: Theoretical Astrophysics Group
     subtitle: Center for Computational Sciences
-    uni: University of Tsukuba
+    uni: University of Erlangen-Nürnberg
 
 
