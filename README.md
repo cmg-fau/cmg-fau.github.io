@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/TheoreticalAstrophysicsGroup/TheoreticalAstrophysicsGroup.github.io.svg?branch=source)](https://travis-ci.org/TheoreticalAstrophysicsGroup/TheoreticalAstrophysicsGroup.github.io)
 
-# Theoretical Astrophysics Group Homepage
+# Computational Microscopy Group Homepage
 
-This is the Jekyll-powered webpage repo for the Theoretical Astrophysics Group (宇宙物理理論研究室) at the Center for Computational Sciences, University of Tsukuba.
+This is the Jekyll-powered webpage repo for the Computational Microscopy Group at the The Center for Nanoanalysis and Electron Microscopy (CENEM), University of Erlangen-Nürnberg..
 
 The webpage is meant to give an overview of the members, research, and activities of the group.
 
-The site is almost entirely bilingual (English and Japanese), and the language can be switched (top right menu, or collapsible menu for portable devices) whilst staying on the same page (that is, the corresponding page in the other language is loaded).
+The site is in English, and the language can be switched (top right menu, or collapsible menu for portable devices) whilst staying on the same page (that is, the corresponding page in the other language is loaded).
 
 The design of the site is based on the [OpenMind](https://wrapbootstrap.com/theme/open-mind-customizable-template-WB0410L74) Bootstrap 4 template by AGM studio.
 
@@ -14,7 +14,6 @@ The design of the site is based on the [OpenMind](https://wrapbootstrap.com/them
 
 All members of the group are welcome to contribute via pull requests. The `categories` for posts are:
 
-* `uchu-forum`
 * `seminars`  (to be renamed `colloquia` at some point in the near future)
 * `projects`
 * `news`
@@ -37,7 +36,7 @@ Member information are stored as Jekyll `collections`. Information of members ca
 
 ## Contact form
 
-The contact form sends an email to `astro.ccs.tsukuba@gmail.com`, to which the webadmin has access.
+
 
 ## Calendar
 
