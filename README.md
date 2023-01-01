@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TheoreticalAstrophysicsGroup/TheoreticalAstrophysicsGroup.github.io.svg?branch=source)](https://travis-ci.org/TheoreticalAstrophysicsGroup/TheoreticalAstrophysicsGroup.github.io)
+[![Build Status](https://travis-ci.org/cmg-fau/cmg-fau.github.io.svg?branch=source)](https://travis-ci.org/cmg-fau/cmg-fau.github.io)
 
 # Computational Microscopy Group Homepage
 

@@ -9,7 +9,7 @@ description: "Computational Microscopy Group"
 #baseurl:
 #url:
 
-timezone: Asia/Tokyo
+timezone: Europe/Berlin
 
 # Build settings
 markdown: kramdown
@@ -48,7 +48,7 @@ defaults:
     scope:
       path: ""
     values:
-      lang: ja
+      lang: en
   -
     scope:
       path: seminars
