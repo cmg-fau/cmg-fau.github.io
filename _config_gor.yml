@@ -1,14 +1,14 @@
 # Site settings
-title: Theoretical Astrophysics Group
-email: astro.ccs.tsukuba@gmail.com
-webmaster: Alex Wagner
-description: "Theoretical Astrophysics Group, Center for Computational Sciences, University of Tsukuba. We research in Numerical Astrophysics, High-performance Computing, Radiation Hydrodynamics, Galaxy Evolution, Cosmology, First Stars, and much much more."
+title: Computational Microscopy Group
+email: philipp.pelz@fau.de
+webmaster: Philipp Pelz
+description: "Computational Microscopy Group"
 
 # No need for user/organization github pages, and localhost,
 # but deployment on organization server requires
 # subdirectory "/Astro"
 baseurl: /Astro
-url: http://gorilla.ccs.tsukuba.ac.jp
+url: https://cmg-fau.github.io
 
 timezone: Asia/Tokyo
 
@@ -65,11 +65,6 @@ defaults:
       path: achievements
     values:
       layout: single_achievement
-  -
-    scope:
-      path: uchu_forum
-    values:
-      layout: single_uchu_forum
   -
     scope:
       path: conferences
