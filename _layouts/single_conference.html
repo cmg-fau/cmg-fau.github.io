@@ -1,0 +1,370 @@
+---
+layout: default
+---
+
+{% assign tcl = site.data.translations.conferences[page.lang] %}
+{% assign tcll = site.data.translations.categories.long[page.lang] %}
+{% assign la = site.data.links.assets %}
+
+{% include page_header.html title=tcll.conferences %}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4 hidden-md hidden-lg">
+      <aside class="sidebar">
+
+      {% include aside_conf.html %}
+
+      <br/>
+
+      {% unless page.web %}
+        {% include aside_pills_single_conf.html %}
+      {% endunless %}
+
+      </aside>
+    </div> <!-- col -->
+
+
+      <div class="col-md-8">
+
+      <section>
+
+      <!-- Language dependent surrounds -->
+      <!-- This creates open_surround and close_surround variables into the namespace -->
+      {% include lang_surround.html shape='round' %}
+      {% assign open_bra = open_surround %}
+      {% assign close_bra = close_surround%}
+      {% include lang_surround.html shape='quotes' %}
+      {% assign open_quo = open_surround %}
+      {% assign close_quo = close_surround%}
+      {% include lang_surround.html shape='colon' %}
+      {% assign colon = open_surround %}
+
+      <h2 id="title" class="post-title">{{ page.title }}</h2>
+
+      {% if page.img %}
+      <img src="{{ site.baseurl }}{{ la.img }}/{{ page.categories[0] }}/{{ page.img[0] }}" class="img-responsive" alt="Image">
+      {% endif %}
+
+       
+      <h3 id="motivation">{{ tcl.motivation }}</h3>
+      {{ content }}
+
+      {% if page.review %}
+      <h3 id="review"> {{ tcl.review }} </h3>
+      <ul>
+        {% for rev in page.review %}
+        <li>{{ rev.name }}{{ open_bra }}{{ rev.affil }}{{ close_bra }}{% if rev.title %}{{ colon }}{{ open_quo}}{{ rev.title }}{{ close_quo }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.invited %}
+      <h3 id="invited"> {{ tcl.invited }} </h3>
+      <ul>
+        {% for inv in page.invited %}
+        <li>{{ inv.name }}{{ open_bra }}{{ inv.affil }}{{ close_bra }}{% if inv.title %}{{ colon }}{{ open_quo}}{{ inv.title }}{{ close_quo }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.contributed %}
+      <h3 id="contributed"> {{ tcl.contributed }} </h3>
+      <ul>
+        {% for con in page.contributed %}
+        <li>{{ con.name }}{{ open_bra }}{{ con.affil }}{{ close_bra }}{% if con.title %}{{ colon }}{{ open_quo}}{{ con.title }}{{ close_quo }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.poster %}
+      <h3 id="poster"> {{ tcl.poster }} </h3>
+      <ul>
+        {% for pos in page.poster %}
+        <li>{{ pos.name }}{{ open_bra }}{{ pos.affil }}{{ close_bra }}{% if pos.title %}{{ colon }}{{ open_quo}}{{ pos.title }}{{ close_quo }}{% endif %}{% if pos.id %} [{{ pos.id }}]{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.panel %}
+      <h3 id="panel"> {{ tcl.panel }} </h3>
+      <ul>
+        {% for pan in page.panel %}
+        <li>{{ pan.name }}{{ open_bra }}{{ pan.affil }}{{ close_bra }}{% if pan.topic %} {{ open_quo}}{{ pan.topic }}{{ close_quo }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.show_all_participants %}
+      <div class="panel-group" id="accordion1">
+        <div class="panel">
+          <div class="panel-heading">
+            <h4 id="participants" class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                {{ tcl.full_part }}
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul>
+                {% if page.review %}
+                  {% for rev in page.review %}
+                    <li>{{ rev.name }}{{ open_bra }}{{ rev.affil }}{{ close_bra }}</li>
+                  {% endfor %}
+                {% endif %}
+                {% if page.invited %}
+                  {% for inv in page.invited %}
+                    <li>{{ inv.name }}{{ open_bra }}{{ inv.affil }}{{ close_bra }}</li>
+                  {% endfor %}
+                {% endif %}
+                {% if page.contributed %}
+                  {% for con in page.contributed %}
+                    <li>{{ con.name }}{{ open_bra }}{{ con.affil }}{{ close_bra }}</li>
+                  {% endfor %}
+                {% endif %}
+                {% if page.participants %}
+                  {% for ptp in page.participants %}
+                    <li>{{ ptp.name }}{{ open_bra }}{{ ptp.affil }}{{ close_bra }}</li>
+                  {% endfor %}
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.important_dates %}
+      <h3 id="important_dates"> {{ tcl.important_dates }} </h3>
+      <ol>
+        {% for impd in page.important_dates %}
+        <li>{% include date.html d=impd.date l='m' %}{% if impd.time %}{{ impd.time | remove: "!" }}{% endif %}{{ colon }}{{ impd.note }}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+
+      {% assign files_loc_base = site.baseurl | append: la.doc %}
+      {% if page.files_loc %}
+        {% assign files_loc_base = files_loc_base | append: '/' | append: page.files_loc %}
+      {% endif %}
+
+      {% if page.registration_message %}
+      <h3 id="registration"> {{ tcl.registration }} </h3>
+      <p>{{ page.registration_message }}</p>
+      {% if page.registration_link %}
+      <p><a href="{{ page.registration_link }}" target="_blank">{{ tcl.registration_link_text }} </a></p>
+      {% endif %}
+      {% endif %}
+
+      {% if page.program or page.program_download or page.info_download or page.contribution_types %}
+      <h3 id="program"> {{ tcl.program }} </h3>
+      {% endif %}
+
+      {% if page.contribution_types %}
+      <ul>
+      {% for type in page.contribution_types %}
+      <li>{{type.type}}{{colon}}{{type.talk}} {{tcl.min}} + {{type.disc}} {{tcl.min}}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.program_download %}
+      {% assign ppd = page.program_download %}
+      <p><a href="{{ files_loc_base }}/{{ ppd.link }}" target="_blank">{{ ppd.text }}</a></p>
+      {% endif %}
+
+      {% if page.info_download %}
+      {% assign pid = page.info_download %}
+      <p><a href="{{ files_loc_base }}/{{ pid.link }}" target="_blank">{{ pid.text }}</a></p>
+      {% endif %}
+
+
+      {% if page.program %}
+      {% for pitem in page.program %}
+
+      {% include lang_count.html number=pitem.day %}
+
+      <h4>{{ pitem.day }}{{ lang_count }} {{ tcl.day }}{{ open_bra }}{% include date.html d=pitem.date l='M' %}{{ close_bra }}</h4>
+      {% for session in pitem.sessions %}
+      {% if session.chair %}
+        {% assign nsessions = session.chair | size %}
+        {% if nsessions > 1 %}
+          {% assign chairs = "" %}
+          {% for chair in session.chair %}
+            {% capture chairs %}{{ chairs | append: chair | append: "|" }}{% endcapture %}
+          {% endfor %}
+        {% else %}
+          {% assign chairs = session.chair[0] %}
+        {% endif %}
+      {% endif %}
+      <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>{% if session.from %}{{ session.from | remove: "!" }}{% endif %}{% if session.to %} ~ {{ session.to | remove: "!" }}{% endif %}</th>
+          <th>{% if session.title %}{{ session.title }}{% endif %}</th>
+          <th>{% if session.chair %}{{ tcl.chair }}: {{ chairs | split: "|" | join: ", " }}{% elsif session.emcee %}{{ tcl.emcee }}: {{ session.emcee }}{% endif %}{% if session.affil %}{{ open_bra }}{{ session.affil }}{{ close_bra }}{% endif %}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for contrib in session.contributions %}
+      {% if page.show_positions and contrib.position %}
+          {% assign first_letter = contrib.position | slice: 0 %}
+          {% if first_letter == "M" or first_letter == "B" or first_letter == "D" %} 
+            {% assign position = contrib.position %}
+          {% else %}
+            {% assign position = false %}
+          {% endif %}
+      {% endif %}
+        <tr>
+          <td>{% if contrib.from %}{{ contrib.from | remove: "!" }}{% endif %}{% if contrib.to %} ~ {{ contrib.to | remove: "!" }}{% endif %}</td>
+          <td>{{ contrib.title }}{% if contrib.pdf %}<span class="pull-right">&nbsp;<a href="{{ files_loc_base }}/talks/{{ contrib.pdf }}" target="_blank"><i class="fa fa-file-pdf-o"></i></a></span>{% endif %}</td>
+          <td>{% if contrib.speaker %}{{ contrib.speaker }}{% endif %}{% if contrib.affil or contrib.position %}{{ open_bra }}{{ contrib.affil }}{% if page.show_positions and position %}, {{ position }}{% endif %}{{ close_bra }}{% endif %}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+      {% endfor %}
+
+      {% endfor %}
+      {% endif %}
+
+
+      {% if page.upload %}
+      <h3 id="upload"> {{ tcl.upload }} </h3>
+      {% assign pu = page.upload %}
+      <p>{{ pu.text }}</p>
+      {% if pu.type == "fileinbox" %}
+      <a href="https://fileinbox.com/{{ pu.link }}" class="fileinbox">Upload Files through dbinbox.com</a>
+      <script type="text/javascript" src="https://fileinbox.com/embed.js"></script>
+      {% endif %}
+      {% endif %}
+
+
+      {% if page.dinner %}
+      {% assign pd = page.dinner %}
+      <h3 id="dinner"> {{ tcl.dinner }} </h3>
+      <ul class="fa-ul">
+        {% if pd.place %}<li><i class="fa-li fa fa-map-marker"></i>{% if pd.web %}<li><a href="{{ pd.web }}" target="_blank">{% endif %}{{ pd.place }}{% if pd.web %} <i class="fa fa-external-link-square "></i></a>{% endif %}</li>{% endif %}
+        {% if pd.date %}<li><i class="fa-li fa fa-calendar"></i>{% include date.html d=pd.date l="M" %}</li>{% endif %}
+        {% if pd.from %}<li><i class="fa-li fa fa-clock-o"></i>{{ pd.from }}{% if pd.to %} ~ {{ pd.to }}{% endif %}</li>{% endif %}
+        {% if pd.price %}<li><i class="fa-li fa fa-yen"></i>{{ pd.price }}</li>{% endif %}
+        {% if pd.about %}<li><i class="fa-li fa fa-question-circle"></i>{{ pd.about }}</li>{% endif %}
+        {% if pd.access %}<li><i class="fa-li fa fa-location-arrow"></i><a href="{{ pd.access }}" target="_blank">{{ tcl.access }}</a></li>{% endif %}
+      </ul>
+      {% endif %}
+
+      {% if page.lunch %}
+      <h3 id="lunch"> {{ tcl.lunch }} </h3>
+      {% assign pl = page.lunch %}
+      <ul class="fa-ul">
+        {% if pl.about %}<li><i class="fa-li fa fa-question-circle"></i>{{ pl.about }}</li>{% endif %}
+        {% if pl.web %}<li><i class="fa-li fa fa-map-marker"></i><a href="{{ pl.web }}" target="_blank">{{ tcl.lunch_info_web }}</a></li>{% endif %}
+        {% if pl.pdf %}<li><i class="fa-li fa fa-file-pdf-o"></i><a href="{{ site.baseurl }}{{ la.doc }}/{{ pl.pdf }}" target="_blank">{{ tcl.lunch_info_pdf }}</a></li>{% endif %}
+      </ul>
+      {% endif %}
+
+      {% if page.other_info %}
+      <h3 id="other_info"> {{ tcl.other_info }} </h3>
+      {% for oi in page.other_info %}
+        <p>{{ oi }}</p>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.events %}
+      <h3 id="events"> {{ tcl.events }} </h3>
+      <ul class="fa-ul">
+      {% for ev in page.events %}
+        <li>{{ ev }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.soc %}
+      <h3 id="soc"> {{ tcl.soc }} </h3>
+      <ul>
+        {% for isoc in page.soc %}
+        <li>{{ isoc.name }}{{ open_bra }}{{ isoc.affil }}{{ close_bra }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.loc %}
+      <h3 id="loc"> {{ tcl.loc }} </h3>
+      <ul>
+        {% for iloc in page.loc %}
+        <li>{{ iloc.name }}{{ open_bra }}{{ iloc.affil }}{{ close_bra }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.organizers %}
+      <h3 id="org"> {{ tcl.org }} </h3>
+      <ul>
+        {% for iorg in page.organizers %}
+        <li>{{ iorg.name }}{{ open_bra }}{{ iorg.affil }}{{ close_bra }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+
+      {% if page.photos %}
+      <h3 id="photos"> {{ tcl.photos }} </h3>
+      <div id="Grid" class="row">
+        {% for photo in page.photos %}
+        <div class="col-sm-6 col-lg-3 col-md-4">
+          <a href="{{ site.baseurl }}{{ la.img }}/{{ page.categories[0] }}/{{ photo.img }}" class="thumbnail margin-bottom-20" data-lightbox="w1" title="{{ photo.caption }}">
+            <img src="{{ site.baseurl }}{{ la.img }}/{{ page.categories[0] }}/{{ photo.img }}" class="img-responsive" alt="Image">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% if page.photos_zip %}
+      <p><a href="{{ site.baseurl }}{{ la.img }}/{{ page.categories[0] }}/{{ page.photos_zip }}" target="_blank">{{ tcl.photos_zip }}</a></p>
+      {% endif %}
+      {% endif %}
+
+      {% if page.refs %}
+      <h3 id="refs">{{ tcl.refs }}</h3>
+      <ol>
+        {% for ref in page.refs %}
+        {% assign targ = ref.link | truncate: 4,'' %}
+        {% assign chr1 = targ | truncate: 1,'' %}
+        <li id="ref{{ forloop.index }}"><a href="{% unless targ == "http" %}{{ site.baseurl }}{{ la.doc }}/{% endunless %}{{ ref.link }}" {% if targ == "http" %} target="_blank" {% endif %}>{{ ref.name }}</a> {% if targ == "http" %}{% unless chr1 == "/" %} <i class="fa fa-external-link"></i>{% endunless%}{% endif %}</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+
+      </section>
+
+    </div>
+
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <aside class="sidebar">
+
+        <!-- AYW 2014-06-22 13:26 JST Not yet programmed -->
+        <!-- {% raw %} {% include aside_search.html %} {% endraw %} -->
+
+        {% include aside_conf.html %}
+
+        <br/>
+
+        {% unless page.web %}
+          {% include aside_pills_single_conf.html %}
+        {% endunless %}
+
+        <br/>
+        <br/>
+
+      </aside>
+    </div> <!-- col -->
+
+    <div class="col-md-4">
+      <aside class="sidebar">
+        {% include aside_nav_single.html dup=true %}
+      </aside>
+    </div> <!-- col -->
+
+  </div> <!-- row -->
+</div> <!-- container  -->

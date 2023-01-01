@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% assign tcl = site.data.translations.calendar[page.lang] %}
+{% assign la = site.data.links.assets %}
+{% assign li = site.data.links.internal %}
+
+{% include page_header.html title=page.title %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <!--<h3 class="post-title">{{ tml.schedule }}</h3>-->
+
+      <iframe src="https://calendar.google.com/calendar/embed?title=Schedule%20of%20the%20Theoretical%20Astrophysics%20Group&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23ffffff&amp;src=japanese__en_gb%40holiday.calendar.google.com&amp;color=%235229A3&amp;src=n8hisfse1rahqsem0nb2qgvt4g%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Asia%2FTokyo" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12"><div id="calendar"></div></div>
+
+    <div class="col-md-7">
+      <p><a href="#" target="_blank">{{ tcl.previous }}</a></p>
+    </div>
+
+    <div class="col-md-5">
+    </div>
+    <!-- AYW 2014-07-02 22:56 JST Just kept for reference -->
+      <!--<img src="{{ site.baseurl }}{{ la.img }}/{{ page.img[0] }}" alt="" class="imageborder alignright">-->
+    <!-- <img src="js/holder.js/200x170" alt="" class="imageborder alignleft"> -->
+    <!-- <img src="js/holder.js/200x180/social" alt="" class="imageborder alignright"> -->
+
+
+  </div>
+</div> <!-- container  -->
+

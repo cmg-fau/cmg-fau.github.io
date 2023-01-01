@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+{% assign tal = site.data.translations.alumni[page.lang] %}
+{% assign la = site.data.links.assets %}
+{% assign li = site.data.links.internal %}
+
+{% include page_header.html title=page.title %}
+          
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h3 class="post-title">{{ tal.postgrads }}</h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>{{ tal.name }}</th>
+            <th>{{ tal.deg }}</th>
+            <th>{{ tal.lastyr }}</th>
+            <th>{{ tal.thereafter }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in page.postgrads %}
+          <tr>
+            <td>{{ m.name }}</td>
+            <td>{{ m.deg }}</td>
+            <td>{{ m.lastyr }}</td>
+            <td>{{ m.thereafter }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3 class="post-title">{{ tal.students }}</h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>{{ tal.name }}</th>
+            <th>{{ tal.lastyr }}</th>
+            <th>{{ tal.thereafter }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in page.students %}
+          <tr>
+            <td>{{ m.name }}</td>
+            <td>{{ m.lastyr }}</td>
+            <td>{{ m.thereafter }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+ 
+      {{ content }}
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+    </div>
+
+    <div class="col-md-5">
+    </div>
+    <!-- AYW 2014-07-02 22:56 JST Just kept for reference -->
+    <!-- <img src="{{ site.baseurl }}{{ la.img }}/{{ page.img[0] }}" alt="" class="imageborder alignright"> -->
+    <!-- <img src="js/holder.js/200x170" alt="" class="imageborder alignleft"> -->
+    <!-- <img src="js/holder.js/200x180/social" alt="" class="imageborder alignright"> -->
+
+  </div>
+</div> <!-- container  -->
+
+

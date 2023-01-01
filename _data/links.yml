@@ -1,0 +1,157 @@
+
+# All links use a leading /, like page.url
+
+# List categories separately
+categories:
+  achievements: &achievements /achievements 
+  news:  &news /news
+  seminars: &seminars /seminars 
+  uchu_forum: &uchu_forum /uchu_forum 
+  conferences: &conferences /conferences 
+  featured: &featured /featured 
+  members: &members /members 
+  projects: &projects /projects 
+
+
+# External links
+external:
+  ja:
+    access: https://www.ccs.tsukuba.ac.jp/access/
+    pas_admission: http://www.px.tsukuba.ac.jp/~senkou/admission.php
+    uot_admission: http://www.tsukuba.ac.jp/admission/graduate/infomation.html
+    uot: http://www.tsukuba.ac.jp/
+    ccs: https://www.ccs.tsukuba.ac.jp/
+    ccs_astro: http://www.ccs.tsukuba.ac.jp/ccs_introduction/depart_intro/universe
+    pas: http://www.px.tsukuba.ac.jp/~senkou/
+    pas_physics: http://www.pas.tsukuba.ac.jp/faculty/physics.html
+    pas_cirfse: http://www.pas.tsukuba.ac.jp/~CiRfSE/
+    wiki: http://www2.ccs.tsukuba.ac.jp/ccswiki/astro/
+    observers: http://www.px.tsukuba.ac.jp/~nakai/astroobs/index.html
+    scheduler: https://r1.rwin.jp/CCSTsukuba/
+    uot_calendar: http://www.tsukuba.ac.jp/campuslife/calendar/
+    ccs_internal_pages: https://www.ccs.tsukuba.ac.jp/internalpage
+    ccs_internal: https://www2.ccs.tsukuba.ac.jp/Internal/
+    ccs_internal_wiki: https://www2.ccs.tsukuba.ac.jp/ccswiki/etc/
+    uot_fair: https://v3.fair.tsukuba.ac.jp/
+  en: 
+    access: https://www.ccs.tsukuba.ac.jp/eng/traffic-access/
+    pas_admission: http://www.px.tsukuba.ac.jp/~senkou/en/admission.php
+    uot_admission: http://www.tsukuba.ac.jp/english/admission/
+    uot: http://www.tsukuba.ac.jp/english/
+    ccs: http://www.ccs.tsukuba.ac.jp/eng/
+    ccs_astro: http://www.ccs.tsukuba.ac.jp/eng/research-activities/research-divisions/astrophysics-group/
+    pas: http://www.px.tsukuba.ac.jp/~senkou/en/
+    pas_physics: http://www.pas.tsukuba.ac.jp/english/index.html
+    pas_cirfse: http://www.pas.tsukuba.ac.jp/~CiRfSE/eng/index.html
+    wiki: http://www2.ccs.tsukuba.ac.jp/ccswiki/astro/
+    observers: http://www.px.tsukuba.ac.jp/~nakai/astroobs/index.html
+    scheduler: https://r1.rwin.jp/CCSTsukuba/
+    uot_calendar: https://www.tsukuba.ac.jp/english/campuslife/calendar.html
+    ccs_internal_pages: https://www.ccs.tsukuba.ac.jp/en/internalpage
+    ccs_internal: https://www2.ccs.tsukuba.ac.jp/Internal/
+    ccs_internal_wiki: https://www2.ccs.tsukuba.ac.jp/ccswiki/etc/
+    uot_fair: https://v3.fair.tsukuba.ac.jp/
+
+
+# Internal links (directories under root)
+# Includes categories, but link to values above
+internal:
+  home: &home /home
+  members: *members
+  achievements: *achievements
+  projects: *projects
+  projects_astro: &projects_a /projects/#astro
+  projects_hpc: &projects_h /projects/#hpc
+  projects_dev: &projects_d /projects/#dev
+  projects_cab: &projects_c /projects/#cab
+  projects_med: &projects_m /projects/#med
+  projects_past: &projects_p /projects/#past
+  featured: *featured
+  news: *news
+  contact: &contact /contact
+  information: &information /information
+  uchu_forum: *uchu_forum
+  seminars: *seminars
+  conferences: *conferences
+  conferences_future_local: &conferences_fl /conferences/#future
+  conferences_current_local: &conferences_cl /conferences/#current
+  conferences_past_local: &conferences_pl /conferences/#past
+  conferences_abroad: &conferences_ab /conferences/#abroad
+  conferences_domestic: &conferences_do /conferences/#domestic
+  calendar: &calendar /calendar
+  admission: &admission /admission
+  resources: &resources /resources
+  search: &search /search
+  membersform: &membersform /members/membersform
+  alumni: &alumni /alumni
+  #astro_internal: &astro_internal /astro_internal # previously Astro-Internal
+
+
+# TODO: category assets links should be automatic.
+# Internal links
+assets:
+  img: /assets/img
+  img_achievements: /assets/img/achievements
+  img_people: /assets/img/people
+  img_events: /assets/img/events
+  img_albums: /assets/img/albums
+  img_projects: /assets/img/projects
+  css: /assets/css
+  js: /assets/js
+  fonts: /assets/fonts
+  doc: /assets/doc
+  doc_projects: /assets/doc/projects
+  doc_achievements: /assets/doc/achievements
+  doc_annual_reports: /assets/doc/annual_reports
+  tipuesearch: /assets/tipuesearch
+
+
+# Nav links
+# Includes categories, but link to values above
+nav:
+  home:
+    home_ja: *home
+    home_en: *home
+  group:
+    members: *members
+    achievements: *achievements
+    featured: *featured
+    news: *news
+    access: external
+    contact: *contact
+    information: *information
+  schedule:
+    uchu_forum: *uchu_forum
+    seminars: *seminars
+    conferences: *conferences
+    calendar: *calendar
+    uot_calendar: external
+    internal: header
+    wiki: external
+    scheduler: external
+    ccs_internal_pages: external
+    uot_fair: external
+  projects:
+    projects_astro: *projects_a
+    projects_hpc: *projects_h
+    projects_dev: *projects_d
+    projects_cab: *projects_c
+    projects_med: *projects_m
+    projects_past: *projects_p
+  postgrad:
+    admission: *admission
+    pas_admission: external
+    uot_admission: external
+    alumni: *alumni
+  links:
+    uot: external
+    ccs: external
+    ccs_astro: external
+    pas: external
+    pas_physics: external
+    pas_cirfse: external
+    observers: external  
+    asj: external  
+    resources: *resources
+
+

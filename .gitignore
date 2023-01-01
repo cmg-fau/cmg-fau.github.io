@@ -1,0 +1,10 @@
+_site
+__plugins
+**/.*.sw*
+vendor
+.sitemaps.xml
+assets/tipuesearch/tipuesearch_content.js
+_scripts/pdf
+_scripts/bib
+Gemfile.lock
+.jekyll-metadata

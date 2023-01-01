@@ -1,0 +1,148 @@
+
+{% assign tfl = site.data.translations.footer[page.lang] %}
+{% assign li = site.data.links.internal %}
+{% assign la = site.data.links.assets %}
+{% assign ln = site.data.links.nav %}
+{% assign lel = site.data.links.external[page.lang] %}
+
+<aside id="footer-widgets">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sitemap  -->
+      <div class="col-md-4">
+        <h3 class="footer-widget-title">{{ tfl.sitemap }}</h3>
+        <ul class="list-unstyled three_cols">
+          {% for l in ln %}
+          {% assign lk = l[0] %}
+          {% assign lv = l[1] %}
+          {% unless lk == 'home' %}
+          {% for dl in lv %}
+          {% assign dlk = dl[0] %}
+          {% assign dlv = dl[1] %}
+
+          <!-- Just one for conferences -->
+          {% unless dlk == 'conferences_current_local' %}
+          {% unless dlk == 'conferences_past_local' %}
+          {% unless dlk == 'conferences_abroad' %}
+          {% unless dlk == 'conferences_domestic' %}
+
+          {% if dlv contains '/' %}
+          {% assign link =  dlv | prepend: site.baseurl | append: '/' | append: page.lang %}
+          <li><a href="{{ link }}">{{ tfl[dlk] }}</a></li>
+          {% endif %}
+
+          {% endunless %}
+          {% endunless %}
+          {% endunless %}
+          {% endunless %}
+
+          {% endfor %}
+
+          {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="col-md-4">
+        <div class="footer-widget">
+          <h3 class="footer-widget-title">{{ tfl.recent_posts }}</h3>
+          {% assign posts_lang = site.posts | where: 'lang', page.lang %}
+          {% for post in posts_lang limit: 3 %}
+          {% assign posturl = post.url | prepend: site.baseurl %}
+          <div class="media">
+
+          <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+          {% if post.categories[0] == 'achievements' %}
+          {% assign imdir = 'achievements/' %}
+          {% elsif post.categories[0] == 'projects' %}
+          {% assign imdir = 'projects/' %}
+          {% elsif post.categories[0] == 'seminars' %}
+          {% assign imdir = 'seminars/' %}
+          {% elsif post.categories[0] == 'conferences' %}
+          {% assign imdir = 'conferences/' %}
+          {% elsif post.categories[0] == 'uchu_forum' %}
+          {% assign imdir = 'uchu_forum/' %}
+          {% elsif post.categories[0] == 'news' %}
+          {% assign imdir = 'news/' %}
+          {% else %}  
+          {% assign imdir = '' %}
+          {% endif %}
+              <a class="pull-left" href="{{ posturl }}"><img class="media-object" src="{{ site.baseurl }}{{ la.img }}/{{ imdir }}/{% if post.img_thumb %}{{ post.img_thumb }}{% else %}sq-no_img.jpg{% endif %}" width="75" height="75" alt="image"></a>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="{{ posturl }}">{{ post.title | truncatewords: 12 }}</a></h4>
+              <small>{% include date.html d=post.date l='s' %}</small>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Recent Achievements -->
+      <div class="col-md-4">
+        <div class="footer-widget">
+          <h3 class="footer-widget-title">{{ tfl.recent_work }}</h3>
+          <div class="row">
+            {% assign posts_lang = site.categories['achievements'] | where: 'lang', page.lang %}
+            {% for post in posts_lang limit: 4 %}
+            {% assign posturl = post.url | prepend: site.baseurl %}
+            <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+              <a href="{{ posturl }}" class="thumbnail"><img src="{{ site.baseurl }}{{la.img_achievements}}/{% if post.img %}{{ post.img[0] | replace: '.png', '-360x240.png' }}{% else %}no_img-360x240.png{% endif %}" class="img-responsive" alt="Image"></a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+</aside> <!-- footer-widgets -->
+
+<!-- Copyright  -->
+<footer id="footer">
+  <p>&copy; {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}{{ li.home }}/{{ page.lang }}">{{ tfl.title }}</a>, <a href="{{ lel.ccs }}">{{ tfl.subtitle }}</a>, <a href="{{ lel.uot }}">{{ tfl.uni }}</a>. All rights reserved.</p>
+</footer>
+
+</div> <!-- boxed -->
+
+<div id="back-top">
+  <a href="#header"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+
+<!-- Scripts -->
+<script src="{{ site.baseurl }}{{ la.js }}/jquery-1.10.2.min.js"></script>
+<!-- See i fyou can find newer versions for some of the below -->
+<script src="{{ site.baseurl }}{{ la.js }}/jquery.cookie.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/jquery.mixitup.min.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/lightbox-2.6.min.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/holder.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/app.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/styleswitcher.js"></script>
+
+<script src="{{ site.baseurl }}{{ la.js }}/syntax/shCore.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/syntax/shBrushXml.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/syntax/shBrushJScript.js"></script>
+
+<script src="{{ site.baseurl }}{{ la.js }}/membersform.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/get_nth_weekday.js"></script>
+<script src="{{ site.baseurl }}{{ la.js }}/uchu_forum_form.js"></script>
+
+<script src="{{ site.baseurl }}{{ la.js }}/parallax.js"></script>
+
+<script type="text/javascript">
+SyntaxHighlighter.all()
+</script>
+
+<!-- Tipuesearch -->
+<script src="{{ site.baseurl }}{{ la.tipuesearch}}/tipuesearch.min.js"></script>
+
+<!-- Tipue search -->
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
+
+

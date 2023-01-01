@@ -1,0 +1,74 @@
+{% assign la = site.data.links.assets %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="FNz9IsYswFxg54ZqfDH8sSk3zjM1_cgxvrK-ZP7-_UM" />
+
+  <!-- AYW From/For Jekyll -->
+  <meta name="description" content="{{ site.description }}"> 
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- favicon -->
+  <link rel="icon" href="{{ site.baseurl }}{{ la.img }}/favicon.ico">
+
+  <!-- CSS -->
+  <link href="{{ site.baseurl }}{{ la.css }}/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="{{ site.baseurl }}{{ la.css }}/font-awesome.min.css" rel="stylesheet" media="screen">
+  <link href="{{ site.baseurl }}{{ la.css }}/animate.min.css" rel="stylesheet" media="screen">
+  <link href="{{ site.baseurl }}{{ la.css }}/lightbox.css" rel="stylesheet" media="screen">
+  <link href="{{ site.baseurl }}{{ la.css }}/syntax/shCore.css" rel="stylesheet"  media="screen">
+  <link href="{{ site.baseurl }}{{ la.css }}/syntax/shThemeDefault.css" rel="stylesheet"  media="screen">
+
+  <link href="{{ site.baseurl }}{{ la.css }}/style.css" rel="stylesheet" media="screen" title="default">
+  <link href="{{ site.baseurl }}{{ la.css }}/color-default.css" rel="stylesheet" media="screen" title="default">
+  <link href="{{ site.baseurl }}{{ la.css }}/width-full.css" rel='stylesheet' media="screen" title="default">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Tipuesearch -->
+  <link href="{{ site.baseurl }}{{ la.tipuesearch }}/tipuesearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="tipuesearch/css/normalize.css">
+  <script src="{{ site.baseurl }}{{ la.tipuesearch}}/tipuesearch_content.js"></script>
+  <script src="{{ site.baseurl }}{{ la.tipuesearch}}/tipuesearch_set.js"></script>
+  <script src="{{ site.baseurl }}{{ la.tipuesearch}}/tipuesearch.min.js"></script>
+
+  <!-- DropzoneJS for forms -->
+  <!-- <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script> -->
+  <!--<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />-->
+  <script src="{{ site.baseurl }}{{ la.js }}/dropzone.js"></script>
+  <link href="{{ site.baseurl }}{{ la.css }}/dropzone.css" rel="stylesheet" media="screen" title="default">
+
+
+  <!-- MathJax support -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <!-- reCaptcha3, according to https://stevencotterill.com/articles/adding-google-recaptcha-v3-to-a-php-form -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfBNuAUAAAAADULYWB1MQk_X8swNQx5hQ6gKweF"></script>
+  <script>
+      grecaptcha.ready(function () {
+          grecaptcha.execute('6LfBNuAUAAAAADULYWB1MQk_X8swNQx5hQ6gKweF', { action: 'contact' }).then(function (token) {
+              var recaptchaResponse = document.getElementById('recaptchaResponse');
+              recaptchaResponse.value = token;
+          });
+      });
+  </script>
+
+</head>

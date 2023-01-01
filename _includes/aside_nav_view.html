@@ -1,0 +1,25 @@
+
+{% assign tpl = site.data.translations.post_gen[page.lang] %}
+
+{% assign dup = include.dup %}
+{% if dup %} {% assign idsfx = '_dup' %}
+{% else %} {% assign idsfx = '' %}
+{% endif %}
+
+<!-- Change preferred view according to page type -->
+<!-- Puts mix1, mix2, mix3, and mix4 into namespace -->
+{% include mixorder.html %}
+
+
+<!-- Select view. Not sure we really need this. -->
+<div class="tab-pane active" id="view{{ idsfx }}">
+  <h3 class="post-title">{{ tpl.view }}</h3>
+  <ul class="portfolio-control">
+    <!--<li class="filter active" data-filter="all"></li>-->
+    <li class="filter" data-filter="{{ mix1 }}" style="width:200px;">{{ tpl.full }}</li><br/>
+    <li class="filter" data-filter="{{ mix2 }}" style="width:200px;">{{ tpl.stacked }}</li><br/>
+    <li class="filter" data-filter="{{ mix3 }}" style="width:200px;">{{ tpl.compact }}</li><br/>
+    <li class="filter" data-filter="{{ mix4 }}" style="width:200px;">{{ tpl.list }}</li>
+  </ul>
+</div>
+

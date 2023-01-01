@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+{% assign til = site.data.translations.information[page.lang] %}
+{% assign la = site.data.links.assets %}
+
+{% include page_header.html title=page.title %}
+          
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h3 class="post-title">{{ til.activities }}</h3>
+
+      {% for m in page.activities_message %}
+      <p>{{ m }}</p>
+      {% endfor %}
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>{{ til.name }}</th>
+            <th>{{ til.participants }}</th>
+            <th>{{ til.time }}</th>
+            <th>{{ til.about }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in page.activities %}
+          <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.participants }}</td>
+            <td>{{ s.time }}</td>
+            <td>{{ s.about }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br/>
+
+      <h3 class="post-title">{{ til.seminars }}</h3>
+
+      {% for m in page.seminars_message %}
+      {% if forloop.index == 1 %}
+      <p>{{ m }}</p>
+      {% else %}
+      <div class="alert alert-info">{{ m }} </div>
+      {% endif %}
+      {% endfor %}
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>{{ til.name }}</th>
+            <th>{{ til.advisor }}</th>
+            <th>{{ til.time }}</th>
+            <th>{{ til.text }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in page.seminars %}
+          <tr>
+            <td>{{ forloop.index }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.advisor }}</td>
+            <td>{{ s.time }}</td>
+            <td>{% for t in s.text %}{{ t }}{% if forloop.last == false %}<br />{% endif %}{% endfor %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br/>
+
+      <h3 class="post-title">{{ til.other }}</h3>
+
+      {% for m in page.other_message %}
+      <p>{{ m }}</p>
+      {% endfor %}
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>{{ til.name }}</th>
+            <th>{{ til.advisor }}</th>
+            <th>{{ til.time }}</th>
+            <th>{{ til.text }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in page.other %}
+          <tr>
+            <td>{{ forloop.index }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.advisor }}</td>
+            <td>{{ s.time }}</td>
+            <td>{% for t in s.text %}{{ t }}{% if forloop.last == false %}<br />{% endif %}{% endfor %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br/>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7">
+      {{ content }}
+    </div>
+
+    <!-- AYW 2014-07-02 22:56 JST Just kept for reference -->
+    <!-- <img src="js/holder.js/200x170" alt="" class="imageborder alignleft"> -->
+    <!-- <img src="js/holder.js/200x180/social" alt="" class="imageborder alignright"> -->
+
+  </div>
+</div> <!-- container  -->
+
