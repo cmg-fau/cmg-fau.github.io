@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Artificial Intelligence in Medical Imaging › AIMI Lab</title>
+    <meta name="description"
+        content="AIMI @ BVM in Heidelberg! And Congratulations Maja!. AIMI lab at Lange Nacht der Wissenschaften 2022. Two Dissertation Awards for (Prof.) ..." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.aimi.tf.fau.de/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="alternate" type="application/rss+xml" title="AIMI Lab - RSS 2.0 Feed"
+        href="https://www.aimi.tf.fau.de/feed/">
+    <link rel="alternate" type="application/rss+xml" title="AIMI Lab &raquo; Feed"
+        href="https://www.aimi.tf.fau.de/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="AIMI Lab &raquo; Comments Feed"
+        href="https://www.aimi.tf.fau.de/comments/feed/" />
+    <link rel='stylesheet' id='fau-style-css'
+        href='/assets/style.css?ver=2.1.7' media='all' />
+    <link rel='stylesheet' id='fau-style-print-css'
+        href='/assets/print.css?ver=2.1.7' media='print' />
+    <link rel='stylesheet' id='rrze-legal-cookie-css'
+        href='https://www.aimi.tf.fau.de/wp-content/plugins/rrze-legal/build/banner.css?ver=2.6.4' media='all' />
+    <script src='https://www.aimi.tf.fau.de/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+    <script src='https://www.aimi.tf.fau.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+        id='jquery-migrate-js'></script>
+    <link rel="dns-prefetch" href="http://www.aimi.tf.fau.de" crossorigin>
+    <link rel="dns-prefetch" href="https://fau.de" crossorigin>
+    <link rel="dns-prefetch" href="https://tf.fau.de" crossorigin>
+    <link rel="shortcut icon"
+        href="/assets/img/socialmedia/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/assets/img/socialmedia/favicon-apple-touch.png">
+    <link rel="icon" type="image/png" sizes="180x180"
+        href="/assets/img/socialmedia/favicon-180x180.png">
+    <link rel="icon" type="image/svg+xml"
+        href="/assets/img/socialmedia/favicon.svg" sizes="any">
+    <link rel="mask-icon" type="image/svg+xml"
+        href="/assets/img/socialmedia/favicon-mask.svg"
+        color="#04316a">
+    <meta name="msapplication-TileColor" content="#04316a">
+    <meta name="msapplication-TileImage"
+        content="/assets/img/socialmedia/favicon-180x180.png">
+    <meta name="theme-color" content="#04316a">
+    <!-- If you are reading this, we might be for you!
+		FAU is always looking for promising talents in all university areas who are willing to work for FAU with passion, creativity and commitment:
+		https://jobs.fau.de -->
+</head>
+
+<body id="top"
+    class="home blog wp-embed-responsive post-sidebar with-sidebar faculty-tf fau-theme fauorg-fakultaet nologo slider-autoplay slider-fade blogroll-image-3-2 mainnav-plainview with-search-sidebar">
+    <div id="pagewrapper">
+        <div id="headerwrapper">
+            <nav id="skiplinks" aria-label="Jump links">
+                <ul class="jumplinks">
+                    <li><a href="#maintop" tabindex="0">Skip navigation</a></li>
+                    <li><a href="#nav" tabindex="0">Skip to navigation</a></li>
+                    <li><a href="#footer" tabindex="0">Skip to the bottom</a></li>
+                </ul>
+            </nav>
+            <div id="meta">
+                <div class="header-container">
+                    <div class="header-row" id="meta-menu">
+                        <div class="meta-links-container">
+                            <a href="#meta-menu" class="meta-links-trigger meta-links-trigger-open">
+                                <span class="meta-links-trigger-text">Simulate organization breadcrumb open</span>
+                                <span class="meta-links-trigger-icon meta-links-trigger-icon-fau">
+                                    <svg height="58" width="153" aria-labelledby="website-title" aria-hidden="true"
+                                        role="img">
+                                        <use xlink:href="#fau-logo-2021" class="faubaselogo" />
+                                    </svg> </span>
+                            </a>
+                            <a href="#top" class="meta-links-trigger meta-links-trigger-close">
+                                <span class="meta-links-trigger-text">Simulate organization breadcrumb close</span>
+                                <span class="meta-links-trigger-icon">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                                        class="svg-inline--fa fa-times fa-w-11" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+                                        <path fill="currentColor"
+                                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="meta-logo">
+                            <div class="branding" itemscope itemtype="http://schema.org/Organization">
+                                <span class="textlogo"><span class="baselogo"><svg height="58" width="153"
+                                            aria-labelledby="website-title-meta" aria-hidden="true" role="img">
+                                            <use xlink:href="#fau-logo-2021" class="faubaselogo" />
+                                        </svg></span><span class="text"><span class="fau-title"
+                                            aria-hidden="true">Friedrich-Alexander-Universität</span> <span
+                                            id="website-title-meta" class="visible-title tf" itemprop="name">AIMI
+                                            Lab</span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="meta-links" aria-label="Navigation: More offers">
+                        <ul class="orgalist">
+                            <li class="fauhome"><a href="https://www.fau.eu"><svg height="16" width="42"
+                                        aria-labelledby="fau-logo-2021-title-3 fau-logo-2021-desc-3" role="img">
+                                        <title id="fau-logo-2021-title-3">FAU</title>
+                                        <desc id="fau-logo-2021-desc-3">To the central FAU website</desc>
+                                        <use xlink:href="#fau-logo-2021" class="fau" />
+                                    </svg></a></li>
+                        </ul>
+                        <nav class="orga-breadcrumb" aria-label="Organizational navigation">
+                            <ol class="breadcrumblist" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                        itemprop="item" href="https://www.fau.eu" data-wpel-link="internal"><span
+                                            itemprop="name">Friedrich-Alexander-Universität</span></a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                        itemprop="item" href="https://www.tf.fau.eu/" data-wpel-link="internal"><span
+                                            itemprop="name">Faculty of Engineering</span></a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ol>
+                        </nav>
+                        <div itemscope itemtype="https://schema.org/WebSite" class="meta-search">
+                            <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction"
+                                id="search-header" role="search" aria-label="Search website" method="get"
+                                class="searchform" action="/">
+                                <label for="headsearchinput">
+                                    Please enter the search term for searching into the documents of this website:
+                                </label>
+                                <meta itemprop="target" content="https://www.aimi.tf.fau.de/?s={s}">
+                                <input itemprop="query-input" id="headsearchinput" type="text" value="" name="s"
+                                    placeholder="Search for..." required>
+                                <input type="hidden" name="post_type[]" value="page">
+                                <input type="hidden" name="post_type[]" value="post">
+                                <input type="submit" enterkeyhint="search" value="Find">
+                            </form>
+                        </div>
+
+                        <ul class="meta-nav menu">
+                            <li><a data-wpel-link="internal" href="https://campo.fau.de/">Campo</a></li>
+                            <li><a data-wpel-link="internal" href="https://univis.fau.de/">UnivIS</a></li>
+                            <li><a data-wpel-link="internal" href="https://www.jobs.fau.de/">Jobs</a></li>
+                            <li><a data-wpel-link="internal" href="https://karte.fau.de/">Map</a></li>
+                            <li><a data-wpel-link="internal" href="https://www.fau.de/notfall/">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="orga-breadcrumb" aria-label="Organizational navigation">
+                <ol class="breadcrumblist" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item"
+                            href="https://www.fau.eu" data-wpel-link="internal"><span
+                                itemprop="name">Friedrich-Alexander-Universität</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item"
+                            href="https://www.tf.fau.eu/" data-wpel-link="internal"><span itemprop="name">Faculty of
+                                Engineering</span></a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </nav>
+            <header id="header">
+                <div class="header-container">
+                    <div class="header-row">
+                        <div class="branding" id="logo" itemscope itemtype="http://schema.org/Organization">
+
+                            <span class="textlogo"><span class="baselogo"><svg height="58" width="153"
+                                        aria-labelledby="website-title" aria-hidden="true" role="img">
+                                        <use xlink:href="#fau-logo-2021" class="faubaselogo" />
+                                    </svg></span><span class="text"><span class="fau-title"
+                                        aria-hidden="true">Friedrich-Alexander-Universität</span> <span
+                                        id="website-title" class="visible-title tf" itemprop="name">AIMI
+                                        Lab</span></span></span>
+                        </div>
+                        <nav class="header-menu" id="nav" aria-label="Main navigation">
+                            <a href="#nav" id="mainnav-toggle"><span>Navigation</span></a>
+                            <a href="#top" id="mainnav-toggle-close"><span>Navigation close</span></a>
+                            <div id="nav-wrapper">
+                                <ul class="nav">
+                                    <li class="level1 current-menu-item"><a href="https://www.aimi.tf.fau.de"
+                                            class=" menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">Home</a>
+                                    </li>
+                                    <li class="level1"><a href="https://www.aimi.tf.fau.de/research/"
+                                            class=" menu-item">Research</a></li>
+                                    <li class="level1"><a href="https://www.aimi.tf.fau.de/teaching/"
+                                            class=" menu-item">Teaching</a></li>
+                                    <li class="level1"><a href="https://www.aimi.tf.fau.de/team/"
+                                            class=" menu-item">Team</a></li>
+                                    <li class="level1"><a href="https://www.aimi.tf.fau.de/contact/"
+                                            class=" menu-item">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <section id="hero" class="hero-banner">
+            <div class="banner" aria-hidden="true" role="presentation">
+                <div class="introimg">
+
+                    <div class="banner-text">
+                        <div class="hero-container">
+                            <div class="hero-row">
+
+                                <div class="infobar">
+                                    <p class="sitetitle">AIMI Lab</p>
+                                    <div class="slogan">
+                                        <p class="description">Artificial Intelligence in Medical Imaging</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="content">
+            <div class="content-container">
+                <div class="post-row">
+                    <main class="entry-content">
+                        <h1 id="maintop">Index</h1>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-301-10264" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-301-10264" itemprop="headline"><a itemprop="url"
+                                    href="/2022/08/aimi-bvm-in-heidelberg-and-congratulations-maja/">AIMI @ BVM in
+                                    Heidelberg! And Congratulations Maja!</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2022-08-15T12:33:11+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2022/08/aimi-bvm-in-heidelberg-and-congratulations-maja/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2022/08/PXL_20220627_1503567252-415x320.jpg" width="415"
+                                                height="320"
+                                                alt="Towards entry &quot;AIMI @ BVM in Heidelberg! And Congratulations Maja!&quot;"
+                                                srcset="/files/2022/08/PXL_20220627_1503567252-415x320.jpg 415w, /files/2022/08/PXL_20220627_1503567252-300x232.jpg 300w, /files/2022/08/PXL_20220627_1503567252-1024x790.jpg 1024w, /files/2022/08/PXL_20220627_1503567252-768x593.jpg 768w, /files/2022/08/PXL_20220627_1503567252-1536x1186.jpg 1536w, /files/2022/08/PXL_20220627_1503567252-2048x1581.jpg 2048w, /files/2022/08/PXL_20220627_1503567252-140x108.jpg 140w, /files/2022/08/PXL_20220627_1503567252-311x240.jpg 311w, /files/2022/08/PXL_20220627_1503567252-609x470.jpg 609w"
+                                                sizes="(max-width: 415px) 100vw, 415px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2022/08/PXL_20220627_1503567252-415x320.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">At this year's workshop "Bildverarbeitung für die Medizin"
+                                        in Heidelberg, we were able to present our work on different topics across
+                                        medical imaging:
+
+                                        Maja Schlereth, PhD student at the AIMI lab, received the second price for the
+                                        best scientific paper for her work "Initial Investigations Towards ...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2022/08/aimi-bvm-in-heidelberg-and-congratulations-maja/"
+                                            title="AIMI @ BVM in Heidelberg! And Congratulations Maja!">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-283-12569" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-283-12569" itemprop="headline"><a itemprop="url"
+                                    href="/2022/06/aimi-lab-at-lange-nacht-der-wissenschaften-2022/">AIMI lab at Lange
+                                    Nacht der Wissenschaften 2022</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2022-06-03T13:13:27+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2022/06/aimi-lab-at-lange-nacht-der-wissenschaften-2022/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2022/06/banner_ndw22_250x250px_wirsinddabei.jpg" width="250"
+                                                height="250"
+                                                alt="Towards entry &quot;AIMI lab at Lange Nacht der Wissenschaften 2022&quot;"
+                                                srcset="/files/2022/06/banner_ndw22_250x250px_wirsinddabei.jpg 250w, /files/2022/06/banner_ndw22_250x250px_wirsinddabei-150x150.jpg 150w, /files/2022/06/banner_ndw22_250x250px_wirsinddabei-240x240.jpg 240w"
+                                                sizes="(max-width: 250px) 100vw, 250px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2022/06/banner_ndw22_250x250px_wirsinddabei.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">At this year's "Lange Nacht der Wissenschaften" (Night of
+                                        Science), a total of 20 000 visitors explored science and research across all
+                                        fields and at different locations in Erlangen, Nürnberg and Fürth. At the booth
+                                        of the AIMI lab at Henkestraße 27, visitors could explore different aspects
+                                        around d...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2022/06/aimi-lab-at-lange-nacht-der-wissenschaften-2022/"
+                                            title="AIMI lab at Lange Nacht der Wissenschaften 2022">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-208-13416" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-208-13416" itemprop="headline"><a itemprop="url"
+                                    href="/2021/11/two-dissertation-awards-for-prof-dr-katharina-breininger/">Two
+                                    Dissertation Awards for (Prof.) Dr. Katharina Breininger</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-11-29T18:16:44+01:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/11/two-dissertation-awards-for-prof-dr-katharina-breininger/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2021/11/fautechfak191121-1084-1-480x320.jpg" width="480"
+                                                height="320"
+                                                alt="Towards entry &quot;Two Dissertation Awards for (Prof.) Dr. Katharina Breininger&quot;"
+                                                srcset="/files/2021/11/fautechfak191121-1084-1-480x320.jpg 480w, /files/2021/11/fautechfak191121-1084-1-300x200.jpg 300w, /files/2021/11/fautechfak191121-1084-1-1024x683.jpg 1024w, /files/2021/11/fautechfak191121-1084-1-768x512.jpg 768w, /files/2021/11/fautechfak191121-1084-1-1536x1024.jpg 1536w, /files/2021/11/fautechfak191121-1084-1-2048x1365.jpg 2048w, /files/2021/11/fautechfak191121-1084-1-360x240.jpg 360w, /files/2021/11/fautechfak191121-1084-1-705x470.jpg 705w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/11/fautechfak191121-1084-1-480x320.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">At this year’s “Tag der Technischen Fakultät”, Prof. Dr.
+                                        Katharina Breininger was awarded with two dissertation awards – the
+                                        “Karl-Gierl-Preis 2021” by the Erika-Gierl-Stiftung presented by Prof. Dr.
+                                        Andreas Fröba and the Dissertation Award for the best female young scientist by
+                                        the Women’s Represen...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/11/two-dissertation-awards-for-prof-dr-katharina-breininger/"
+                                            title="Two Dissertation Awards for (Prof.) Dr. Katharina Breininger">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-211-16530" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-211-16530" itemprop="headline"><a itemprop="url"
+                                    href="/2021/10/forscherinnen-camp-at-the-faculty-of-engineering-and-at-siemens-healthineers/">Forscherinnen-Camp
+                                    at the Faculty of Engineering and at Siemens Healthineers</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-11-29T18:01:29+01:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/10/forscherinnen-camp-at-the-faculty-of-engineering-and-at-siemens-healthineers/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2021/10/kinder-surprise-diagnosis-480x320.jpg" width="480"
+                                                height="320"
+                                                alt="Towards entry &quot;Forscherinnen-Camp at the Faculty of Engineering and at Siemens Healthineers&quot;"
+                                                srcset="/files/2021/10/kinder-surprise-diagnosis-480x320.jpg 480w, /files/2021/10/kinder-surprise-diagnosis-300x200.jpg 300w, /files/2021/10/kinder-surprise-diagnosis-1024x681.jpg 1024w, /files/2021/10/kinder-surprise-diagnosis-768x511.jpg 768w, /files/2021/10/kinder-surprise-diagnosis-1536x1022.jpg 1536w, /files/2021/10/kinder-surprise-diagnosis-2048x1362.jpg 2048w, /files/2021/10/kinder-surprise-diagnosis-361x240.jpg 361w, /files/2021/10/kinder-surprise-diagnosis-707x470.jpg 707w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/10/kinder-surprise-diagnosis-480x320.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">Getting female students excited about STEM subjects and
+                                        providing career guidance is still essential to increase the number of women in
+                                        this field. The 11th Forscherinnen-Camp (science camp for female high school
+                                        students) at the Faculty of Engineering from November 1 to 5 offered an
+                                        opportunity to ...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/10/forscherinnen-camp-at-the-faculty-of-engineering-and-at-siemens-healthineers/"
+                                            title="Forscherinnen-Camp at the Faculty of Engineering and at Siemens Healthineers">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-216-28255" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-216-28255" itemprop="headline"><a itemprop="url"
+                                    href="/2021/10/two-papers-from-our-group-at-compay-miccai-21-and-one-paper-at-cdpath-iccv-21/">Two
+                                    papers from our group at COMPAY (MICCAI &#8217;21) and one paper at CDPath (ICCV
+                                    &#8217;21)</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-11-30T17:58:39+01:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/10/two-papers-from-our-group-at-compay-miccai-21-and-one-paper-at-cdpath-iccv-21/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2021/10/theelke-et-al_2-480x286.png" width="480"
+                                                height="286"
+                                                alt="Towards entry &quot;Two papers from our group at COMPAY (MICCAI &#8217;21) and one paper at CDPath (ICCV &#8217;21)&quot;"
+                                                srcset="/files/2021/10/theelke-et-al_2-480x286.png 480w, /files/2021/10/theelke-et-al_2-300x179.png 300w, /files/2021/10/theelke-et-al_2-1024x610.png 1024w, /files/2021/10/theelke-et-al_2-768x457.png 768w, /files/2021/10/theelke-et-al_2-1536x915.png 1536w, /files/2021/10/theelke-et-al_2-403x240.png 403w, /files/2021/10/theelke-et-al_2-789x470.png 789w, /files/2021/10/theelke-et-al_2.png 1647w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/10/theelke-et-al_2-480x286.png">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">We are happy to announce two papers presented at the
+                                        COMPAY workshop at the Medical Image Computing and Computer Assisted
+                                        Intervention (MICCAI) conference 2021 by Christian Marzahl and Jonathan Ganz:
+
+                                        Robust quad-tree based registration of whole slide images
+                                        Christian Marzahl, Frauke Wilm, Christ...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/10/two-papers-from-our-group-at-compay-miccai-21-and-one-paper-at-cdpath-iccv-21/"
+                                            title="Two papers from our group at COMPAY (MICCAI &#8217;21) and one paper at CDPath (ICCV &#8217;21)">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-223-18858" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-223-18858" itemprop="headline"><a itemprop="url"
+                                    href="/2021/10/first-successful-midog-challenge-at-miccai-2021/">First successful
+                                    MIDOG challenge at MICCAI 2021</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-11-30T17:55:58+01:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/10/first-successful-midog-challenge-at-miccai-2021/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2021/10/winners-midog-480x270.jpg" width="480" height="270"
+                                                alt="Towards entry &quot;First successful MIDOG challenge at MICCAI 2021&quot;"
+                                                srcset="/files/2021/10/winners-midog-480x270.jpg 480w, /files/2021/10/winners-midog-300x169.jpg 300w, /files/2021/10/winners-midog-426x240.jpg 426w, /files/2021/10/winners-midog.jpg 680w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/10/winners-midog-480x270.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">At this year's MICCAI satellite events, the results of the
+                                        first MIDOG (Mitosis Domain Generalization) challenge were presented. The goal
+                                        of the challenge was to investigate and tackle the domain shift for different
+                                        scanners for the task of mitosis detection for breast cancer. The 14 best
+                                        performing...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/10/first-successful-midog-challenge-at-miccai-2021/"
+                                            title="First successful MIDOG challenge at MICCAI 2021">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-173-15320" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-173-15320" itemprop="headline"><a itemprop="url"
+                                    href="/2021/07/welcome-jingna/">Welcome Jingna!</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-07-19T22:48:39+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/07/welcome-jingna/" tabindex="-1" class="news-image"><img
+                                                src="/files/2021/07/dsc_0143-e1626186255522-220x320.jpg" width="220"
+                                                height="320" alt="Towards entry &quot;Welcome Jingna!&quot;"
+                                                srcset="/files/2021/07/dsc_0143-e1626186255522-220x320.jpg 220w, /files/2021/07/dsc_0143-e1626186255522-206x300.jpg 206w, /files/2021/07/dsc_0143-e1626186255522-703x1024.jpg 703w, /files/2021/07/dsc_0143-e1626186255522-768x1118.jpg 768w, /files/2021/07/dsc_0143-e1626186255522-1055x1536.jpg 1055w, /files/2021/07/dsc_0143-e1626186255522-165x240.jpg 165w, /files/2021/07/dsc_0143-e1626186255522-323x470.jpg 323w, /files/2021/07/dsc_0143-e1626186255522.jpg 1370w"
+                                                sizes="(max-width: 220px) 100vw, 220px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/07/dsc_0143-e1626186255522-220x320.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">We are exited to welcome Jingna Qiu to the AIMI@FAU lab as
+                                        the second PhD student starting in July! Jingna received her Master’s degree in
+                                        Medical Engineering from Friedrich-Alexander University Erlangen-Nürnberg. She
+                                        joined the AIMI@FAU lab at the AIBE department in July 2021 as Ph.D. candidate
+                                        und...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/07/welcome-jingna/" title="Welcome Jingna!">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-149-22184" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-149-22184" itemprop="headline"><a itemprop="url"
+                                    href="/2021/07/welcome-maja/">Welcome Maja!</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-07-12T11:55:10+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/07/welcome-maja/" tabindex="-1" class="news-image"><img
+                                                src="/files/2021/07/5f3162a7-328x320.jpg" width="328" height="320"
+                                                alt="Towards entry &quot;Welcome Maja!&quot;"
+                                                srcset="/files/2021/07/5f3162a7-328x320.jpg 328w, /files/2021/07/5f3162a7-300x293.jpg 300w, /files/2021/07/5f3162a7-1024x998.jpg 1024w, /files/2021/07/5f3162a7-768x749.jpg 768w, /files/2021/07/5f3162a7-1536x1498.jpg 1536w, /files/2021/07/5f3162a7-246x240.jpg 246w, /files/2021/07/5f3162a7-482x470.jpg 482w, /files/2021/07/5f3162a7.jpg 2000w"
+                                                sizes="(max-width: 328px) 100vw, 328px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/07/5f3162a7-328x320.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">The AIMI@FAU lab is happy to welcome Maja Veigel as a PhD
+                                        student to the team!
+
+                                        Maja Veigel received her Master's degree in Medical Engineering with
+                                        specialization on Medical Imaging and Data Processing from Friedrich-Alexander
+                                        University Erlangen-Nürnberg. She joined the AIMI@FAU lab at the AIBE ...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/07/welcome-maja/" title="Welcome Maja!">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-106-11980" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-106-11980" itemprop="headline"><a itemprop="url"
+                                    href="/2021/07/hightech-summit-fau-erlangen/">Hightech Summit @FAU Erlangen</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-07-02T18:27:42+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a
+                                            href="/2021/07/hightech-summit-fau-erlangen/" tabindex="-1"
+                                            class="news-image"><img
+                                                src="/files/2021/07/hightech_summit_20210701_0855_sippel-480x254-1.jpg"
+                                                width="480" height="254"
+                                                alt="Towards entry &quot;Hightech Summit @FAU Erlangen&quot;"
+                                                srcset="/files/2021/07/hightech_summit_20210701_0855_sippel-480x254-1.jpg 480w, /files/2021/07/hightech_summit_20210701_0855_sippel-480x254-1-300x159.jpg 300w, /files/2021/07/hightech_summit_20210701_0855_sippel-480x254-1-454x240.jpg 454w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/07/hightech_summit_20210701_0855_sippel-480x254-1.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">On July 1, 2021, experts from science, industry and
+                                        politics discussed the impact of the Bavarian Hightech Agenda at the Hightech
+                                        Summit at Friedrich-Alexander-University in Erlangen. The discussion on "Der
+                                        Mensch im Fokus - Wie KI die Medizin revolutioniert" focused on the topic of how
+                                        we can ensur...</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2021/07/hightech-summit-fau-erlangen/"
+                                            title="Hightech Summit @FAU Erlangen">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                        <article class="news-item post has-post-thumbnail" aria-labelledby="aria-93-17397" itemscope
+                            itemtype="http://schema.org/NewsArticle">
+                            <h2 id="aria-93-17397" itemprop="headline"><a itemprop="url" href="/2020/12/wer-ist/">Wer
+                                    ist&#8230; Katharina Breininger?</a></h2>
+                            <div>
+                                <meta itemprop="dateModified" content="2021-07-03T17:21:16+02:00">
+                                <meta itemprop="author"
+                                    content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            </div>
+                            <div class="teaser-row">
+                                <div class="thumbnailregion">
+                                    <div aria-hidden="true" role="presentation" class="passpartout" itemprop="image"
+                                        itemscope itemtype="https://schema.org/ImageObject"><a href="/2020/12/wer-ist/"
+                                            tabindex="-1" class="news-image"><img
+                                                src="/files/2021/07/breininger_video-480x269.jpg" width="480"
+                                                height="269"
+                                                alt="Towards entry &quot;Wer ist&#8230; Katharina Breininger?&quot;"
+                                                srcset="/files/2021/07/breininger_video-480x269.jpg 480w, /files/2021/07/breininger_video-300x168.jpg 300w, /files/2021/07/breininger_video-1024x574.jpg 1024w, /files/2021/07/breininger_video-768x430.jpg 768w, /files/2021/07/breininger_video-428x240.jpg 428w, /files/2021/07/breininger_video-839x470.jpg 839w, /files/2021/07/breininger_video.jpg 1203w"
+                                                sizes="(max-width: 480px) 100vw, 480px" itemprop="thumbnailUrl"
+                                                loading="lazy"></a>
+                                        <meta itemprop="url"
+                                            content="https://www.aimi.tf.fau.de/files/2021/07/breininger_video-480x269.jpg">
+                                        <meta itemprop="width" content="480">
+                                        <meta itemprop="height" content="320">
+                                    </div>
+                                </div>
+                                <div class="teaserregion">
+                                    <p itemprop="description">Since November 1, 2020, Katharina Breininger is a
+                                        Professor for Artificial Intelligence in Medical Imaging. Check out the
+                                        following video for more information about her previous work as well as the
+                                        research focus for the AIMI@FAU lab.</p>
+                                    <div class="continue"><a aria-hidden="true" tabindex="-1" class="read-more-link"
+                                            href="/2020/12/wer-ist/"
+                                            title="Wer ist&#8230; Katharina Breininger?">Continue</a></div>
+                                </div>
+                            </div>
+                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="AIMI Lab">
+                                <meta itemprop="url" content="https://www.aimi.tf.fau.de/">
+                            </div>
+                        </article>
+                    </main>
+                    <aside class="sidebar-single" aria-label="Sidebar">
+
+                        <div id="recent-posts-2" class="widget widget_recent_entries">
+                            <h2>Recent Posts</h2>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.aimi.tf.fau.de/2022/08/aimi-bvm-in-heidelberg-and-congratulations-maja/">AIMI
+                                        @ BVM in Heidelberg! And Congratulations Maja!</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.aimi.tf.fau.de/2022/06/aimi-lab-at-lange-nacht-der-wissenschaften-2022/">AIMI
+                                        lab at Lange Nacht der Wissenschaften 2022</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.aimi.tf.fau.de/2021/11/two-dissertation-awards-for-prof-dr-katharina-breininger/">Two
+                                        Dissertation Awards for (Prof.) Dr. Katharina Breininger</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.aimi.tf.fau.de/2021/10/forscherinnen-camp-at-the-faculty-of-engineering-and-at-siemens-healthineers/">Forscherinnen-Camp
+                                        at the Faculty of Engineering and at Siemens Healthineers</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.aimi.tf.fau.de/2021/10/two-papers-from-our-group-at-compay-miccai-21-and-one-paper-at-cdpath-iccv-21/">Two
+                                        papers from our group at COMPAY (MICCAI &#8217;21) and one paper at CDPath (ICCV
+                                        &#8217;21)</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div id="custom_html-3" class="widget_text widget widget_custom_html">
+                            <h2>Head of AIMI</h2>
+                            <div class="textwidget custom-html-widget">
+                                <div class="fau-person thumb-size-small border" itemscope
+                                    itemtype="http://schema.org/Person">
+                                    <div class="row">
+                                        <figure itemprop="image" class="person-thumb" aria-hidden="true"
+                                            role="presentation" itemtype="http://schema.org/ImageObject"><a
+                                                href="https://www.aimi.tf.fau.de/person/katharina-breininger/"
+                                                tabindex="-1"><img
+                                                    src="https://www.aimi.tf.fau.de/files/2021/07/breininger_katharina_1314_portrait_small-120x160.jpg"
+                                                    itemprop="contentUrl" alt="Katharina Breininger" width="120"
+                                                    height="160"
+                                                    srcset="/files/2021/07/breininger_katharina_1314_portrait_small-120x160.jpg 120w, /files/2021/07/breininger_katharina_1314_portrait_small-225x300.jpg 225w, /files/2021/07/breininger_katharina_1314_portrait_small-240x320.jpg 240w, /files/2021/07/breininger_katharina_1314_portrait_small-180x240.jpg 180w, /files/2021/07/breininger_katharina_1314_portrait_small-353x470.jpg 353w, /files/2021/07/breininger_katharina_1314_portrait_small.jpg 640w"
+                                                    sizes="(max-width: 120px) 100vw, 120px"></a>
+                                            <meta itemprop="identifier"
+                                                content="https://www.aimi.tf.fau.de/person/katharina-breininger/">
+                                            <meta itemprop="width" content="120">
+                                            <meta itemprop="height" content="160">
+                                        </figure>
+                                        <div class="person-default-thumb">
+                                            <h3><a href="https://www.aimi.tf.fau.de/person/katharina-breininger/"><span
+                                                        itemprop="name"><span itemprop="honorificPrefix">Prof.
+                                                            Dr.-Ing.</span> <span class="fullname"><span
+                                                                itemprop="givenName">Katharina</span> <span
+                                                                itemprop="familyName">Breininger</span></span></span></a>
+                                            </h3>
+                                            <div class="person-info"><span class="person-info-position"
+                                                    itemprop="jobTitle">Professor (W1) for Artificial Intelligence in
+                                                    Medical Imaging</span><br>
+                                                <p itemprop="worksFor" itemtype="http://schema.org/Organization"><span
+                                                        itemprop="name">AIMI@FAU Lab</span><br><span
+                                                        itemprop="department">Department Artificial Intelligence in
+                                                        Biomedical Engineering</span><br></p>
+                                                <ul class="contactlist">
+                                                    <li class="person-info-email email"><span
+                                                            class="screen-reader-text">Email: </span><a itemprop="email"
+                                                            href="mailto:katharina.breininger@fau.de">katharina.breininger@fau.de</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-logo fau">
+                        <svg height="55" width="144">
+                            <use xlink:href="#fau-logo-2021" class="fau-logo-footer" />
+                        </svg>
+                    </div>
+                    <div class="footer-address">
+                        <address itemscope itemtype="http://schema.org/PostalAddress">
+                            <meta itemprop="name"
+                                content="Professur für Artificial Intelligence in Medical Imaging Universität Erlangen-Nürnberg">
+                            <span>Professur für Artificial Intelligence in Medical Imaging<br>Universität
+                                Erlangen-Nürnberg</span><br>
+                            <span itemprop="streetAddress">Henkestraße 91</span><br>
+                            <span itemprop="postalCode">91052</span> <span
+                                itemprop="addressLocality">Erlangen</span><br>
+                            <span itemprop="addressCountry"></span>
+                        </address>
+                    </div>
+                    <div class="footer-meta">
+                        <nav aria-label="Contact, imprint and additional information">
+                            <ul id="footer-nav" class="menu">
+                                <li class="tos menu-item menu-item-type-custom menu-item-object-custom menu-item-195"><a
+                                        href="https://www.aimi.tf.fau.de/imprint">Imprint</a></li>
+                                <li class="tos menu-item menu-item-type-custom menu-item-object-custom menu-item-196"><a
+                                        href="https://www.aimi.tf.fau.de/privacy">Privacy</a></li>
+                                <li class="tos menu-item menu-item-type-custom menu-item-object-custom menu-item-197"><a
+                                        href="https://www.aimi.tf.fau.de/accessibility">Accessibility</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <a href="#pagewrapper" class="top-link">
+                <svg height="38" width="38">
+                    <use xlink:href="#chevron-up-solid" />
+                </svg>
+                <span class="screen-reader-text">Up</span></a>
+        </footer>
+    </div>
+
+    <svg class="fau-svg-definitions" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="fau-logo-2021" viewBox="0 0 479 183">
+            <g id="Logo" transform="matrix(1 0 0 1 0 -2)">
+                <path
+                    d="M0 19.1 L9.3 9.8 L9.3 178.1 L0 178.1 Z M27.8 11.3 L139 11.3 L139 2 L18.5 2 L18.5 11.3 L18.5 113.3 L120.9 113.3 L120.9 104 L27.8 104 Z M134.9 85.4 L46.3 85.4 L46.3 48.3 L122 48.3 L131.3 39 L46.3 39 L46.3 29.7 L139 29.7 L139 20.4 L46.3 20.4 L37 20.4 L37 94.5 L125.6 94.5 Z M18.5 127.1 L18.5 178.1 L27.8 178.1 L27.8 131.8 L37.1 131.8 L37.1 170.4 L46.4 161.1 L46.4 131.8 L121 131.8 L121 122.5 L18.5 122.5 Z M469.8 2 L469.8 108.6 C469.8 133.4 458.7 154.7 432.9 171.1 L432.7 170.8 C449.7 157.3 460.5 140.1 460.5 117.7 L460.5 2 L451.2 2 L451.2 117.5 C451.2 150.8 424.2 175.7 391 175.7 C357.8 175.7 330.8 150.7 330.8 117.5 L330.8 9.8 L321.5 19.1 L321.5 117.8 C321.5 156.2 352.6 185 391 185 C391.9 185 400.3 185 400.3 185 C438.1 185 479.1 157.1 479.1 108.8 C479.1 108.8 479.1 2.1 479.1 2.1 L469.8 2.1 Z M391 166.5 C419.1 166.5 442 145.7 442 117.5 L442 117.5 L442 9.8 L432.7 19.1 L432.7 108.6 C432.7 126.5 418.2 138.7 400.3 138.7 C382.4 138.7 367.9 126.5 367.9 108.6 L367.9 2 L358.6 2 L358.6 108.6 C358.6 131.6 377.3 148 400.3 148 C409.7 148 421.2 143.3 428.9 135.2 L429.1 135.5 C421.8 149 408.4 157.3 391 157.3 C368.1 157.3 349.5 140.7 349.3 117.9 L349.3 117.9 L349.3 2 L340 2 L340 117.9 L340 117.9 C340.2 145.8 363 166.5 391 166.5 Z M185.1 122.5 L161.7 178.1 L171 178.1 L171 178.1 L171 178.1 L182.7 150.3 L261.2 150.3 L272.9 178.1 L282.2 178.1 L266.5 141 L186.5 141 L190.4 131.7 L271.8 131.7 L291.3 178 L300.6 178 L277.2 122.4 L185.1 122.4 Z M198.7 2 L130.6 163.6 L136.5 171.6 L208 2 Z M235.8 2 L307.2 171.6 L313.1 163.6 L245 2 Z M179.7 113.2 L152.3 178.1 L143 178.1 L212.6 13 L250.9 103.9 L260.2 103.9 L217.2 2 L226.5 2 L273.3 113.2 Z M221.9 57.1 L202.1 104 L241.6 104 Z M183.6 104 L192.9 104 L217.3 46.1 L212.7 35.1 Z" />
+            </g>
+        </symbol>
+        <symbol id="chevron-up-solid" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z">
+            </path>
+        </symbol>
+    </svg>
+    <!--googleoff: all-->
+    <div data-nosnippet>
+        <script id="RRZELegalBannerWrap"
+            type="text/template"><div id="RRZELegalBanner" class="RRZELegal" role="dialog" aria-labelledby="BannerTextHeadline" aria-describedby="BannerTextDescription" aria-modal="true"> <div class="middle-center" style="display: none;"> <div class="_rrzelegal-box-wrap"> <div class="_rrzelegal-box _rrzelegal-box-advanced"> <div class="cookie-box"> <div class="container"> <div class="row"> <div class="col-12"> <div class="_rrzelegal-flex-center"> <span role="heading" aria-level="3" class="_rrzelegal-h3" id="BannerTextHeadline"> Privacy Settings </span> </div> <p id="BannerTextDescription"> <p>Our website uses cookies and similar technologies.</p> <p>Some cookies are necessary for visiting this website, i.e. essential. Otherwise, without these cookies, your end device would not be able to remember your privacy choices, for example.</p> <p>If you agree, we also use cookies and data to measure your interactions with our website or to integrate external media (e.g. videos).</p> <p>You can view and withdraw your consent at any time at <a href="https://www.aimi.tf.fau.de/privacy/" tabindex="0">Privacy policy</a>. On the site you will also find additional information about the cookies and technologies used.</p> </p> <fieldset> <legend class="sr-only">Privacy Settings</legend> <ul> <li> <label class="_rrzelegal-checkbox"> Essential <input id="checkbox-essential" tabindex="0" type="checkbox" name="cookieGroup[]" value="essential" checked disabled data-rrzelegal-cookie-checkbox> <span class="_rrzelegal-checkbox-indicator"></span> </label> </li> <li> <label class="_rrzelegal-checkbox"> External Media <input id="checkbox-external_media" tabindex="0" type="checkbox" name="cookieGroup[]" value="external_media" data-rrzelegal-cookie-checkbox> <span class="_rrzelegal-checkbox-indicator"></span> </label> </li> </ul> </fieldset> <p class="_rrzelegal-accept"> <a href="#" tabindex="0" role="button" class="_rrzelegal-btn _rrzelegal-btn-accept-all _rrzelegal-cursor" data-cookie-accept-all> Accept all </a> </p> <p class="_rrzelegal-accept"> <a href="#" tabindex="0" role="button" id="BannerSaveButton" class="_rrzelegal-btn _rrzelegal-cursor" data-cookie-accept> Save </a> </p> <p class="_rrzelegal-refuse-btn"> <a class="_rrzelegal-btn" href="#" tabindex="0" role="button" data-cookie-refuse> Accept only essential cookies </a> </p> <p class="_rrzelegal-manage-btn"> <a href="#" tabindex="0" data-cookie-individual> Individual privacy settings </a> </p> <p class="_rrzelegal-legal"> <a href="https://www.aimi.tf.fau.de/imprint/" tabindex="0"> Imprint </a> <span class="_rrzelegal-separator"></span> <a href="https://www.aimi.tf.fau.de/privacy/" tabindex="0"> Privacy policy </a> <span class="_rrzelegal-separator"></span> <a href="https://www.aimi.tf.fau.de/accessibility/" tabindex="0"> Accessibility </a> </p> </div> </div> </div> </div> <div class="cookie-preference" aria-hidden="true" role="dialog" aria-describedby="CookiePrefDescription" aria-modal="true"> <div class="container not-visible"> <div class="row no-gutters"> <div class="col-12"> <div class="row no-gutters align-items-top"> <div class="col-12"> <div class="_rrzelegal-flex-center"> <span role="heading" aria-level="3" class="_rrzelegal-h3"> Privacy Settings </span> </div> <p id="CookiePrefDescription"> <span class="_rrzelegal-paragraph _rrzelegal-text-description">Here you will find an overview of all cookies used. You can give your consent to whole categories or display further information and select certain cookies.</span> </p> <div class="row no-gutters align-items-center"> <div class="col-12 col-sm-10"> <p class="_rrzelegal-accept"> <a href="#" class="_rrzelegal-btn _rrzelegal-btn-accept-all _rrzelegal-cursor" tabindex="0" role="button" data-cookie-accept-all> Accept all </a> <a href="#" id="CookiePrefSave" tabindex="0" role="button" class="_rrzelegal-btn _rrzelegal-cursor" data-cookie-accept> Save </a> <a href="#" class="_rrzelegal-btn _rrzelegal-refuse-btn _rrzelegal-cursor" tabindex="0" role="button" data-cookie-refuse> Accept only essential cookies </a> </p> </div> <div class="col-12 col-sm-2"> <p class="_rrzelegal-refuse"> <a href="#" class="_rrzelegal-cursor" tabindex="0" data-cookie-back> Back </a> </p> </div> </div> </div> </div> <div data-cookie-accordion> <fieldset> <legend class="sr-only">Privacy Settings</legend> <div class="bcac-item"> <div class="d-flex flex-row"> <label class="w-75"> <span role="heading" aria-level="4" class="_rrzelegal-h4"> Essential (4) </span> </label> <div class="w-25 text-right"> </div> </div> <div class="d-block"> <p>Essential cookies enable basic functions and are necessary for the proper function of the website.</p> <p class="text-center"> <a href="#" class="_rrzelegal-cursor d-block" tabindex="0" data-cookie-accordion-target="essential"> <span data-cookie-accordion-status="show"> Show Cookie Information </span> <span data-cookie-accordion-status="hide" class="rrzelegal-hide"> Hide Cookie Information </span> </a> </p> </div> <div class="rrzelegal-hide" data-cookie-accordion-parent="essential"> <table> <tr> <th>Name</th> <td> <label> Default Cookie </label> </td> </tr> <tr> <th>Provider</th> <td>Owner of this website</td> </tr> <tr> <th>Purpose</th> <td>Saves the visitors preferences selected in the Consent Banner.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://www.aimi.tf.fau.de/privacy/" target="_blank" rel="nofollow noopener noreferrer"> https://www.aimi.tf.fau.de/privacy/ </a> </td> </tr> <tr> <th>Hosts</th> <td>www.aimi.tf.fau.de</td> </tr> <tr> <th>Cookie Name</th> <td>rrze-legal-consent</td> </tr> <tr> <th>Cookie Expiry</th> <td>1 Year</td> </tr> </table> <table> <tr> <th>Name</th> <td> <label> WordPress </label> </td> </tr> <tr> <th>Provider</th> <td>No transmission to third parties</td> </tr> <tr> <th>Purpose</th> <td>Test if cookie can be set. Remember User session.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://www.aimi.tf.fau.de/privacy/" target="_blank" rel="nofollow noopener noreferrer"> https://www.aimi.tf.fau.de/privacy/ </a> </td> </tr> <tr> <th>Hosts</th> <td>.www.aimi.tf.fau.de</td> </tr> <tr> <th>Cookie Name</th> <td>wordpress_[*]</td> </tr> <tr> <th>Cookie Expiry</th> <td>Session</td> </tr> </table> <table> <tr> <th>Name</th> <td> <label> SimpleSAML </label> </td> </tr> <tr> <th>Provider</th> <td>No transmission to third parties</td> </tr> <tr> <th>Purpose</th> <td>Used to manage WebSSO session state.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://www.aimi.tf.fau.de/privacy/" target="_blank" rel="nofollow noopener noreferrer"> https://www.aimi.tf.fau.de/privacy/ </a> </td> </tr> <tr> <th>Hosts</th> <td>www.aimi.tf.fau.de</td> </tr> <tr> <th>Cookie Name</th> <td>SimpleSAMLSessionID,SimpleSAMLAuthToken</td> </tr> <tr> <th>Cookie Expiry</th> <td>Session</td> </tr> </table> <table> <tr> <th>Name</th> <td> <label> PHPSESSID </label> </td> </tr> <tr> <th>Provider</th> <td>No transmission to third parties</td> </tr> <tr> <th>Purpose</th> <td>Preserves user session state across page requests.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://www.aimi.tf.fau.de/privacy/" target="_blank" rel="nofollow noopener noreferrer"> https://www.aimi.tf.fau.de/privacy/ </a> </td> </tr> <tr> <th>Hosts</th> <td>www.aimi.tf.fau.de</td> </tr> <tr> <th>Cookie Name</th> <td>PHPSESSID</td> </tr> <tr> <th>Cookie Expiry</th> <td>Session</td> </tr> </table> </div> </div> <div class="bcac-item"> <div class="d-flex flex-row"> <label class="w-75"> <span role="heading" aria-level="4" class="_rrzelegal-h4"> External Media (4) </span> </label> <div class="w-25 text-right"> <label class="_rrzelegal-btn-switch"> <span class="sr-only"> External Media </span> <input tabindex="0" id="rrzelegal-cookie-group-external_media" type="checkbox" name="cookieGroup[]" value="external_media" data-rrzelegal-cookie-switch> <span class="_rrzelegal-slider"></span> <span class="_rrzelegal-btn-switch-status" data-active="On" data-inactive="Off"> </span> </label> </div> </div> <div class="d-block"> <p>Content from video platforms and social media platforms is blocked by default. If External Media cookies are accepted, access to those contents no longer requires manual consent.</p> <p class="text-center"> <a href="#" class="_rrzelegal-cursor d-block" tabindex="0" data-cookie-accordion-target="external_media"> <span data-cookie-accordion-status="show"> Show Cookie Information </span> <span data-cookie-accordion-status="hide" class="rrzelegal-hide"> Hide Cookie Information </span> </a> </p> </div> <div class="rrzelegal-hide" data-cookie-accordion-parent="external_media"> <table> <tr> <th>Accept</th> <td> <label class="_rrzelegal-btn-switch _rrzelegal-btn-switch--textRight"> <span class="sr-only">Twitter</span> <input id="rrzelegal-cookie-twitter" tabindex="0" type="checkbox" data-cookie-group="external_media" name="cookies[external_media][]" value="twitter" data-rrzelegal-cookie-switch> <span class="_rrzelegal-slider"></span> <span class="_rrzelegal-btn-switch-status" data-active="On" data-inactive="Off" aria-hidden="true"> </span> </label> </td> </tr> <tr> <th>Name</th> <td> <label> Twitter </label> </td> </tr> <tr> <th>Provider</th> <td>Twitter International Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07, Ireland</td> </tr> <tr> <th>Purpose</th> <td>Used to unblock Twitter content.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://twitter.com/privacy" target="_blank" rel="nofollow noopener noreferrer"> https://twitter.com/privacy </a> </td> </tr> <tr> <th>Hosts</th> <td>twimg.com, twitter.com</td> </tr> <tr> <th>Cookie Name</th> <td>__widgetsettings, local_storage_support_test</td> </tr> <tr> <th>Cookie Expiry</th> <td>Unlimited</td> </tr> </table> <table> <tr> <th>Accept</th> <td> <label class="_rrzelegal-btn-switch _rrzelegal-btn-switch--textRight"> <span class="sr-only">YouTube</span> <input id="rrzelegal-cookie-youtube" tabindex="0" type="checkbox" data-cookie-group="external_media" name="cookies[external_media][]" value="youtube" data-rrzelegal-cookie-switch> <span class="_rrzelegal-slider"></span> <span class="_rrzelegal-btn-switch-status" data-active="On" data-inactive="Off" aria-hidden="true"> </span> </label> </td> </tr> <tr> <th>Name</th> <td> <label> YouTube </label> </td> </tr> <tr> <th>Provider</th> <td>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland</td> </tr> <tr> <th>Purpose</th> <td>Used to unblock YouTube content.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://policies.google.com/privacy?hl=en&#038;gl=en" target="_blank" rel="nofollow noopener noreferrer"> https://policies.google.com/privacy?hl=en&#038;gl=en </a> </td> </tr> <tr> <th>Hosts</th> <td>google.com, youtube.com, youtube-nocookie.com</td> </tr> <tr> <th>Cookie Name</th> <td>NID</td> </tr> <tr> <th>Cookie Expiry</th> <td>6 Months</td> </tr> </table> <table> <tr> <th>Accept</th> <td> <label class="_rrzelegal-btn-switch _rrzelegal-btn-switch--textRight"> <span class="sr-only">Vimeo</span> <input id="rrzelegal-cookie-vimeo" tabindex="0" type="checkbox" data-cookie-group="external_media" name="cookies[external_media][]" value="vimeo" data-rrzelegal-cookie-switch> <span class="_rrzelegal-slider"></span> <span class="_rrzelegal-btn-switch-status" data-active="On" data-inactive="Off" aria-hidden="true"> </span> </label> </td> </tr> <tr> <th>Name</th> <td> <label> Vimeo </label> </td> </tr> <tr> <th>Provider</th> <td>Vimeo Inc., 555 West 18th Street, New York, New York 10011, USA</td> </tr> <tr> <th>Purpose</th> <td>Used to unblock Vimeo content.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://vimeo.com/privacy" target="_blank" rel="nofollow noopener noreferrer"> https://vimeo.com/privacy </a> </td> </tr> <tr> <th>Hosts</th> <td>player.vimeo.com</td> </tr> <tr> <th>Cookie Name</th> <td>vuid</td> </tr> <tr> <th>Cookie Expiry</th> <td>2 Years</td> </tr> </table> <table> <tr> <th>Accept</th> <td> <label class="_rrzelegal-btn-switch _rrzelegal-btn-switch--textRight"> <span class="sr-only">Slideshare</span> <input id="rrzelegal-cookie-slideshare" tabindex="0" type="checkbox" data-cookie-group="external_media" name="cookies[external_media][]" value="slideshare" data-rrzelegal-cookie-switch> <span class="_rrzelegal-slider"></span> <span class="_rrzelegal-btn-switch-status" data-active="On" data-inactive="Off" aria-hidden="true"> </span> </label> </td> </tr> <tr> <th>Name</th> <td> <label> Slideshare </label> </td> </tr> <tr> <th>Provider</th> <td>Scribd, Inc., 460 Bryant St, 100, San Francisco, CA 94107-2594 USA</td> </tr> <tr> <th>Purpose</th> <td>Used to unblock Slideshare content.</td> </tr> <tr> <th>Privacy Policy</th> <td class="_rrzelegal-pp-url"> <a href="https://www.slideshare.net/privacy" target="_blank" rel="nofollow noopener noreferrer"> https://www.slideshare.net/privacy </a> </td> </tr> <tr> <th>Hosts</th> <td>www.slideshare.net</td> </tr> <tr> <th>Cookie Name</th> <td>__utma</td> </tr> <tr> <th>Cookie Expiry</th> <td>2 Years</td> </tr> </table> </div> </div> </fieldset> </div> <div class="d-flex justify-content-between"> <p class="_rrzelegal-legal flex-fill"> <a href="https://www.aimi.tf.fau.de/imprint/"> Imprint </a> <span class="_rrzelegal-separator"></span> <a href="https://www.aimi.tf.fau.de/privacy/"> Privacy policy </a> <span class="_rrzelegal-separator"></span> <a href="https://www.aimi.tf.fau.de/accessibility/"> Accessibility </a> </p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </script>
+    </div>
+    <!--googleon: all-->
+    <link rel='stylesheet' id='fau-person-css'
+        href='https://www.aimi.tf.fau.de/wp-content/plugins/fau-person/css/fau-person.css?ver=6.1.1' media='all' />
+    <script src='/assets/js/printlinks.min.js?ver=2.1.7'
+        id='fau-js-printlinks-js'></script>
+    <script src='/assets/js/fau-theme.min.js?ver=2.1.7'
+        id='fau-scripts-js'></script>
+    <script type='text/javascript' id='rrze_legal_consent_banner-js-extra'>
+        /* <![CDATA[ */
+        var rrzelegalCookieConfig = { "ajaxURL": "https:\/\/www.aimi.tf.fau.de\/wp-admin\/admin-ajax.php", "animation": "", "animationDelay": "", "animationIn": "_rrzelegal-fadeInDown", "animationOut": "_rrzelegal-flipOutX", "blockContent": "1", "boxLayout": "box", "boxLayoutAdvanced": "1", "automaticCookieDomainAndPath": "", "cookieDomain": "www.aimi.tf.fau.de", "cookiePath": "\/", "cookieSecure": "1", "cookieLifetime": "182", "cookieLifetimeEssentialOnly": "182", "crossDomainCookie": [], "cookieBeforeConsent": "", "cookiesForBots": "1", "cookieVersion": "3", "hideBannerOnUrls": ["", "https:\/\/www.aimi.tf.fau.de\/imprint\/", "https:\/\/www.aimi.tf.fau.de\/accessibility\/", "https:\/\/www.aimi.tf.fau.de\/privacy\/"], "cookiesForIpAddresses": "1", "respectDoNotTrack": "1", "hasOnlyEssentialCookies": "", "reloadAfterConsent": "", "reloadAfterOptOut": "", "showBanner": "1", "bannerIntegration": "javascript", "ignorePreSelectStatus": "1", "cookies": { "essential": ["default", "wordpress", "simplesamlsessionid", "phpsessid"], "statistics": [], "marketing": [], "external_media": ["twitter", "youtube", "vimeo", "slideshare"] } };
+        var rrzelegalCookieCookies = { "essential": { "default": { "cookieNameList": { "rrze-legal-consent": "rrze-legal-consent" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false } }, "wordpress": { "cookieNameList": { "wordpress_[*]": "wordpress_[*]" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false } }, "simplesamlsessionid": { "cookieNameList": { "SimpleSAMLSessionID": "SimpleSAMLSessionID", "SimpleSAMLAuthToken": "SimpleSAMLAuthToken" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false } }, "phpsessid": { "cookieNameList": { "PHPSESSID": "PHPSESSID" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false } } }, "external_media": { "twitter": { "cookieNameList": { "__widgetsettings": "__widgetsettings", "local_storage_support_test": "local_storage_support_test" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false }, "optInJS": "PHNjcmlwdD5pZih0eXBlb2Ygd2luZG93LlJSWkVMZWdhbCA9PT0gIm9iamVjdCIpIHsgd2luZG93LlJSWkVMZWdhbC51bmJsb2NrQ29udGVudElkKCJ0d2l0dGVyIik7IH08L3NjcmlwdD4=", "optOutJS": "" }, "youtube": { "cookieNameList": { "NID": "NID" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false }, "optInJS": "PHNjcmlwdD5pZih0eXBlb2Ygd2luZG93LlJSWkVMZWdhbCA9PT0gIm9iamVjdCIpIHsgd2luZG93LlJSWkVMZWdhbC51bmJsb2NrQ29udGVudElkKCJ5b3V0dWJlIik7IH08L3NjcmlwdD4=", "optOutJS": "" }, "vimeo": { "cookieNameList": { "vuid": "vuid" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false }, "optInJS": "PHNjcmlwdD5pZih0eXBlb2Ygd2luZG93LlJSWkVMZWdhbCA9PT0gIm9iamVjdCIpIHsgd2luZG93LlJSWkVMZWdhbC51bmJsb2NrQ29udGVudElkKCJ2aW1lbyIpOyB9PC9zY3JpcHQ+", "optOutJS": "" }, "slideshare": { "cookieNameList": { "__utma": "__utma" }, "settings": { "blockCookiesBeforeConsent": false, "prioritize": false, "asyncOptOutCode": false }, "optInJS": "PHNjcmlwdD5pZih0eXBlb2Ygd2luZG93LlJSWkVMZWdhbCA9PT0gIm9iamVjdCIpIHsgd2luZG93LlJSWkVMZWdhbC51bmJsb2NrQ29udGVudElkKCJzbGlkZXNoYXJlIik7IH08L3NjcmlwdD4=", "optOutJS": "" } } };
+		/* ]]> */
+    </script>
+    <script src='https://www.aimi.tf.fau.de/wp-content/plugins/rrze-legal/build/banner.js?ver=2.6.4'
+        id='rrze_legal_consent_banner-js'></script>
+    <script id='rrze_legal_consent_banner-js-after'>
+        document.addEventListener("DOMContentLoaded", function (e) {
+            var rrzelegalCookieContentBlocker = { "twitter": { "id": "twitter", "global": function (contentBlockerData) { }, "init": function (el, contentBlockerData) { }, "settings": { "executeGlobalCodeBeforeUnblocking": false } }, "youtube": { "id": "youtube", "global": function (contentBlockerData) { }, "init": function (el, contentBlockerData) { }, "settings": { "executeGlobalCodeBeforeUnblocking": false } }, "vimeo": { "id": "vimeo", "global": function (contentBlockerData) { }, "init": function (el, contentBlockerData) { }, "settings": { "executeGlobalCodeBeforeUnblocking": false } }, "slideshare": { "id": "slideshare", "global": function (contentBlockerData) { }, "init": function (el, contentBlockerData) { }, "settings": { "executeGlobalCodeBeforeUnblocking": false } } };
+            var RRZELegalInitCheck = function () {
+
+                if (typeof window.RRZELegal === "object" && typeof window.jQuery === "function") {
+
+                    if (typeof rrzelegalCookiePrioritized !== "object") {
+                        rrzelegalCookiePrioritized = { optInJS: {} };
+                    }
+
+                    window.RRZELegal.init(rrzelegalCookieConfig, rrzelegalCookieCookies, rrzelegalCookieContentBlocker, rrzelegalCookiePrioritized.optInJS);
+                } else {
+                    window.setTimeout(RRZELegalInitCheck, 50);
+                }
+            };
+
+            RRZELegalInitCheck();
+        });
+    </script>
+</body>
+
+</html>
