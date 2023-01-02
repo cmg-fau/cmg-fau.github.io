@@ -388,7 +388,7 @@ profile:
     achievements: Achievements
     skills: Skills
     links: Links
-    tsukuba: University of Erlangen-Nürnberg, Center for Computational Sciences, Tennodai 1-1-1, Tsukuba, Ibaraki, Japan 305-8577
+    tsukuba: University of Erlangen-Nürnberg, Center for Nanoanalysis and Electron Microscopy, Tennodai 1-1-1, Tsukuba, Ibaraki, Japan 305-8577
     paris: Institut d'Astrophysique Paris, 98 bis Boulevard Arago, 75014 Paris
 
 
@@ -437,15 +437,15 @@ admission:
     contact: お問い合わせ
     access: アクセス
   en:
-    admission: Theoretical Astrophysics Group Admission Information
-    greeting: To all students interested in joining the Theoretical Astrophysics Group
+    admission: Computational Microscopy Group Admission Information
+    greeting: To all students interested in joining the Computational Microscopy Group
     environment: Research environment
     science: Science
     life: Graduate research program
     career: Career paths
     faq: FAQ
     address: 
-      - Center for Computational Sciences
+      - Center for Nanoanalysis and Electron Microscopy
       - 1-1-1 Tennodai, Tsukuba, Ibaraki
       - Japan 305-8577
     contact: Contact
@@ -1014,12 +1014,12 @@ header:
     wiki: Internal Wiki
     observers: Observational Astrophysics Group
     postgrad: &postgrad_en Graduate School
-    admission: Theoretical Astrophysics Group
+    admission: Computational Microscopy Group
     pas_admission: Graduate School of Pure and Applied Sciences
     uot_admission: University of Erlangen-Nürnberg
     links: Links
     uot: University of Erlangen-Nürnberg
-    ccs: Center for Computational Sciences
+    ccs: Center for Nanoanalysis and Electron Microscopy
     ccs_astro: "&nbsp; ↳ Group Introduction Page"
     pas: Graduate School of Pure and Applied Sciences
     pas_physics: "&nbsp; ↳ Physics"
@@ -1081,8 +1081,8 @@ footer:
     sitemap: Sitemap
     recent_posts: *recent_posts_en
     recent_work: *recent_work_en
-    title: Theoretical Astrophysics Group
-    subtitle: Center for Computational Sciences
+    title: Computational Microscopy Group
+    subtitle: Center for Nanoanalysis and Electron Microscopy
     uni: University of Erlangen-Nürnberg
 
 
