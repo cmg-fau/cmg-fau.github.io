@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Google verification -->
+    <meta name="google-site-verification" content="FNz9IsYswFxg54ZqfDH8sSk3zjM1_cgxvrK-ZP7-_UM" />
+    <!-- AYW From/For Jekyll -->
+    <meta name="description" content="Computational Microscopy Group Website">
+    <title>About Us</title>
+    <link rel="canonical" href="https://cmg-fau.github.io/home/en/"> <!-- favicon -->
+    <link rel="icon" href="/assets/img/favicon.ico"> <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/lightbox.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/syntax/shCore.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/syntax/shThemeDefault.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/style.css" rel="stylesheet" media="screen" title="default">
+    <link href="/assets/css/color-default.css" rel="stylesheet" media="screen" title="default">
+    <link href="/assets/css/width-full.css" rel='stylesheet' media="screen" title="default"> <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Tipuesearch -->
+    <link href="/assets/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="tipuesearch/css/normalize.css">
+    <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch.min.js"></script> <!-- DropzoneJS for forms -->
+    <!-- <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script> -->
+    <!--<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />-->
+    <script src="/assets/js/dropzone.js"></script>
+    <link href="/assets/css/dropzone.css" rel="stylesheet" media="screen" title="default"> <!-- MathJax support -->
+    <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+    <!-- reCaptcha3, according to https://stevencotterill.com/articles/adding-google-recaptcha-v3-to-a-php-form -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfBNuAUAAAAADULYWB1MQk_X8swNQx5hQ6gKweF"></script>
+    <script> grecaptcha.ready(function () { grecaptcha.execute('6LfBNuAUAAAAADULYWB1MQk_X8swNQx5hQ6gKweF', { action: 'contact' }).then(function (token) { var recaptchaResponse = document.getElementById('recaptchaResponse'); recaptchaResponse.value = token; }); }); </script>
+</head>
+
+<body>
+    <div class="boxed animated fadeIn animation-delay-5"> <!--<header id="header" class="">-->
+        <header id="header">
+            <div class="container">
+                <div id="header-title">
+                    <h1 class="animated fadeInDown"><a href="/home/en"><span>Computational Microscopy</span>Group</a>
+                    </h1>
+                    <p class="animated fadeInLeft">University of Erlangen-Nürnberg, Center for Nanoanalysis and Electron
+                        Microscopy</p>
+                    <div class="hidden-xs hidden-sm">
+                        <!-- AYW 2014-06-09 13:14 JST Used social media icons for special links and language switcher -->
+                        <div id="social-header" class="hidden-xs hidden-sm"> <a href="/contact/en"
+                                class="social-icon soc-contact animated fadeInDown animation-delay-1"><i
+                                    class="fa fa-envelope"></i></a> <a
+                                href="https://www.ccs.tsukuba.ac.jp/eng/traffic-access/" target="_blank"
+                                class="social-icon soc-access animated fadeInDown animation-delay-2"><i
+                                    class="fa fa-location-arrow"></i></a> <a href="http://www.ccs.tsukuba.ac.jp/eng/"
+                                target="_blank" class="social-icon soc-ccs animated fadeInDown animation-delay-3"><img
+                                    src="/assets/img/ccs-w-s.png"></img></a> <a href="http://www.tsukuba.ac.jp/english/"
+                                target="_blank" class="social-icon soc-uot animated fadeInDown animation-delay-4"><img
+                                    src="/assets/img/uot-w-s.png"></img></a> <a href="/home/ja/"
+                                class="social-icon soc-lang-sel animated fadeInDown animation-delay-5 "><sub>和</sub></a>
+                            <a href="/home/ja/"
+                                class="social-icon soc-language animated fadeInDown animation-delay-6"><i
+                                    class="fa fa-language"></i></a> <a href="/home/en/"
+                                class="social-icon soc-lang-sel animated fadeInDown animation-delay-7 active "><sub>英</sub></a>
+                        </div> <!-- Search Header -->
+                        <div id="search-header" class="hidden-xs hidden-sm animated fadeInRight">
+                            <!--<div class="input-group">-->
+                            <form action="/search/en/index.html"> <input type="text" name="q" id="tipue_search_input"
+                                    autocomplete="off" required>
+                                <div style="clear: both;"></div>
+                            </form>
+                        </div>
+                    </div> <!-- Only in md and lg -->
+                </div> <!-- container -->
+        </header> <!-- header -->
+        <nav class="navbar navbar-static-top navbar-mind" role="navigation">
+            <div class="container"> <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-mind-collapse"> <span class="sr-only">Toggle navigation</span> <i
+                            class="fa fa-bars fa-inverse"></i> </button> </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-mind-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown active "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/home/ja">日本語 </a></li>
+                                <li><a href="/home/en">English </a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!---->
+                        <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Group <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/members/en">Members </a></li>
+                                <li><a href="/achievements/en">Achievements </a></li>
+                                <li><a href="/featured/en">Featured </a></li>
+                                <li><a href="/news/en">News </a></li>
+                                <li><a href="https://www.ccs.tsukuba.ac.jp/eng/traffic-access/" target="_blank">Location
+                                        and Access <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="/contact/en">Contact </a></li>
+                                <li><a href="/information/en">Information </a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!----> <!---->
+                        <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/uchu_forum/en">Uchu Forum </a></li>
+                                <li><a href="/seminars/en">Seminars </a></li>
+                                <li><a href="/conferences/en">Conferences </a></li>
+                                <li><a href="/calendar/en">Calendar </a></li>
+                                <li><a href="https://www.tsukuba.ac.jp/english/campuslife/calendar.html"
+                                        target="_blank">University of Erlangen-Nürnberg Calendar <font size="1"><i
+                                                class="fa fa-external-link"></i></font></a></li>
+                                <li class="dropdown-header">Internal</li>
+                                <li><a href="http://www2.ccs.tsukuba.ac.jp/ccswiki/astro/" target="_blank">Internal Wiki
+                                        <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="https://r1.rwin.jp/CCSTsukuba/" target="_blank">CCS R1 Scheduler <font
+                                            size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="https://www.ccs.tsukuba.ac.jp/en/internalpage" target="_blank">CCS internal
+                                        pages <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="https://v3.fair.tsukuba.ac.jp/" target="_blank">FAIR accounting system
+                                        <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!----> <!---->
+                        <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/projects/en/#astro">Astrophysics Projects </a></li>
+                                <li><a href="/projects/en/#hpc">HPC projects </a></li>
+                                <li><a href="/projects/en/#dev">Code Development Projects </a></li>
+                                <li><a href="/projects/en/#cab">Computational Astrobiology </a></li>
+                                <li><a href="/projects/en/#med">Computational Medical Science </a></li>
+                                <li><a href="/projects/en/#past">Past Projects </a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!----> <!---->
+                        <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Graduate
+                                School <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/admission/en">Computational Microscopy Group </a></li>
+                                <li><a href="http://www.px.tsukuba.ac.jp/~senkou/en/admission.php"
+                                        target="_blank">Graduate School of Pure and Applied Sciences <font size="1"><i
+                                                class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="http://www.tsukuba.ac.jp/english/admission/" target="_blank">University of
+                                        Erlangen-Nürnberg <font size="1"><i class="fa fa-external-link"></i></font></a>
+                                </li>
+                                <li><a href="/alumni/en">Alumni </a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!----> <!---->
+                        <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.tsukuba.ac.jp/english/" target="_blank">University of
+                                        Erlangen-Nürnberg <font size="1"><i class="fa fa-external-link"></i></font></a>
+                                </li>
+                                <li><a href="http://www.ccs.tsukuba.ac.jp/eng/" target="_blank">Center for Nanoanalysis
+                                        and Electron Microscopy <font size="1"><i class="fa fa-external-link"></i>
+                                        </font></a></li>
+                                <li><a href="http://www.ccs.tsukuba.ac.jp/eng/research-activities/research-divisions/astrophysics-group/"
+                                        target="_blank">&nbsp; ↳ Group Introduction Page <font size="1"><i
+                                                class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="http://www.px.tsukuba.ac.jp/~senkou/en/" target="_blank">Graduate School of
+                                        Pure and Applied Sciences <font size="1"><i class="fa fa-external-link"></i>
+                                        </font></a></li>
+                                <li><a href="http://www.pas.tsukuba.ac.jp/english/index.html" target="_blank">&nbsp; ↳
+                                        Physics <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="http://www.pas.tsukuba.ac.jp/~CiRfSE/eng/index.html" target="_blank">&nbsp;
+                                        ↳ CiRfSE <font size="1"><i class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="http://www.px.tsukuba.ac.jp/~nakai/astroobs/index.html"
+                                        target="_blank">Observational Astrophysics Group <font size="1"><i
+                                                class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="" target="_blank">Astronomical Society of Japan <font size="1"><i
+                                                class="fa fa-external-link"></i></font></a></li>
+                                <li><a href="/resources/en">Resources </a></li>
+                            </ul>
+                        </li> <!-- dropdown --> <!----> <!---->
+                    </ul> <!-- nav nabvar-nav -->
+                    <!-- AYW 2014-06-27 15:37 JST Right navbar is to replace language switch and contact and access links for xs size which are in social icons in other sizes -->
+                    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg">
+                        <li class="dropdown"> <a href="/home/ja/"><i class="fa fa-language"></i> 　日本語で読む</a></li>
+                        <li class="dropdown "> <a href="/contact/en"><i class="fa fa-envelope"></i>　Contact</a> </li>
+                        <li class="dropdown "> <a href="https://www.ccs.tsukuba.ac.jp/eng/traffic-access/"
+                                target="_blank"><i class="fa fa-location-arrow"></i> 　Location and Access <sup><i
+                                        class="fa fa-external-link"></i></sup></a> </li>
+                        <li class="dropdown "> <a href="/search/en" target="_blank"><i class="fa fa-search"></i> 　Search
+                            </a> </li>
+                    </ul> <!-- nav nabvar-nav navbar-right -->
+                </div><!-- navbar-collapse -->
+            </div> <!-- container -->
+        </nav> <!-- navbar navbar-default -->
+        <section>
+            <div id="carousel-example-generic" class="carousel carousel-mind slide" data-ride="carousel"
+                data-interval="5000"> <!-- Indicators -->
+                <ol class="carousel-indicators hidden-xs">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class=" active "></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="5" class=""></li>
+                </ol> <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">Cosmological Structure Formation</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Galaxy Clusters</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Dark Matter and
+                                                        Neutrinos</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>The Fugaku
+                                                        Supercomputer</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/virgo_prom-s.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">The First Stars and Galaxies</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Collapse &amp; Radiative
+                                                        Feedback</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Cosmological
+                                                        Simulations</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Radiation
+                                                        Hydrodynamics</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/susa2014-massspec-st.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">Black-Hole Astrophysics</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Relativistic Radiation
+                                                        Magnetohydrodynamics</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Ray-Tracing in Curved
+                                                        Space-Time</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Accretion Discs, Winds and
+                                                        Jets</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/pom0906_ohsuga1-i.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">Supermassive Black Holes</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Active Galactic
+                                                        Nuclei</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Galactic Outflows</span>
+                                                </li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Black Hole and Galaxy
+                                                        Coevolution</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/jet3d-064-jet-proj-rot.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">Astrobiology</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Planet Habitability</span>
+                                                </li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Biomarkers</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Astrochemistry</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/exoplanetsurface.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-text hidden-xs">
+                                            <h1 class="animated fadeInDownBig">Evolution of the Universe</h1>
+                                            <ul class="list-unstyled carousel-list">
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Dark Matter</span></li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Galaxy Collisions</span>
+                                                </li>
+                                                <li class="animated fadeInLeft"><i
+                                                        class="fa fa-caret-right"></i><span>Neutrinos</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                    <div class="carousel-img"> <img src="/assets/img/kirihara_GalaxyMergerRemnant-c.png"
+                                            class="img-responsive animated fadeInUp" alt="Image"> </div>
+                                </div>
+                                <div class="col-md-6 col-sm-5 hidden-lg hidden-md hidden-sm carousel-img-wrap"> <img
+                                        src="/assets/img/carousel_dummy.png" height="100px" alt="Image"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Controls --> <a class="left carousel-control hidden-xs" href="#carousel-example-generic"
+                    data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a
+                    class="right carousel-control hidden-xs" href="#carousel-example-generic" data-slide="next"><span
+                        class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </section> <!-- carousel --> <!-- The about us and mission section -->
+        <section class="animated fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="section-title">About Us</h2> <img src="/assets/img/group.jpg"
+                            class="img-responsive imageborder" alt="Image">
+                        <p class="p-lg">Our group develops advanced algorithms for efficient processing, reliable
+                            reconstruction and automated information extraction Formation multidimensional microscopy
+                            datasets, predominantly in electron and X-ray microscopy. We have expertise in deep
+                            learning, large-scale optimization, signal and image processing, and experimental design for
+                            advanced X-ray and electron microscopy experiments. We strive to not only develop
+                            algorithms, but also optimize the data acquisition and experimental design to achieve
+                            accelerated and enhanced materials characterization.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="section-title">Featured Articles</h2>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h3 class="post-title"><a href="/featured/en/2021/10/28/press-release.html"
+                                        class="transicion"> [Press release] A cosmological neutrino simulation using
+                                        Fugaku chosen as a 2021 Gordon Bell Prize finalist</a></h3>
+                                <div class="row">
+                                    <div class="col-lg-12"> <a href="/featured/en/2021/10/28/press-release.html"
+                                            class="thumbnail"><img src="/assets/img/2021-10-28-press-release.jpg"
+                                                class="img-responsive" alt="Image"></a>
+                                        <p> In this research, a completely new method of Vlasov simulation was developed
+                                            and adopted in a large-scale simulation of the motion of neutrinos in
+                                            cosmological structure formation. The simulation was run on the entire
+                                            system of supercomputer "Fugaku". Vlasov simulations can deliver noise-free
+                                            numerical results compared to conventional N-body simulations,... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-9 col-sm-8">
+                                        <ul class="fa-ul"> <!-- Language dependent surrounds -->
+                                            <!-- This creates open_surround and close_surround variables into the namespace -->
+                                            <!-- Language dependent surrounds -->
+                                            <li> <i class="fa-li fa fa-pencil"></i> Yoshikawa Kohji (University of
+                                                Erlangen-Nürnberg, Center for Nanoanalysis and Electron Microscopy)
+                                            </li>
+                                            <li> Tanaka Satoshi (University of Kyoto, Yukawa Institute for Theoretical
+                                                Physics) </li>
+                                            <li> Yoshida Naoki (University of Tokyo, Kavli IPMU) </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-sm-4"> <a
+                                            href="/featured/en/2021/10/28/press-release.html" class="pull-right">Read
+                                            more &raquo;</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- container -->
+        </section> <!-- Recent posts section -->
+        <section id="home-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12"> <!--<div class="col-xs-12 hidden-xs">-->
+                        <h2 class="section-title">Recent Posts</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <section class="home-post"> <!-- Sometimes image file entries are lists, e.g., projects -->
+                            <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                            <a href="/seminars/en/2022/12/07/matsumoto.html" class="thumbnail"><img
+                                    src="/assets/img/seminars/accretion_x-rays.jpg" class="img-responsive"
+                                    alt="Image"></a>
+                            <h2 class="home-post-title"><a href="/seminars/en/2022/12/07/matsumoto.html">State
+                                    Transitions and Time Variations of Black Hole Accretion Flows</a></h2>
+                            <h3 class="home-post-title"><a href="/seminars/en/2022/12/07/matsumoto.html">Ryoji
+                                    Matsumoto</a></h3>
+                            <p> Black hole candidates display transitions between hard and soft X-ray states. During the
+                                transition, quasi-periodic oscillations and jet ejections are observed, and the black
+                                hole accretion flow shows intense activity. Our group has investigated the process of
+                                the formation of the soft X-ray emitting region by the cooling of the hot accretion flow
+                                emitting hard X-rays as the disk surface density increases, using three-dimensional
+                                magnetohydrodynamic and radiative magnetohydrodynamic simulations. We found that a
+                                magnetic pressure-dominated accretion disk supported by an azimuthal magnetic field is
+                                formed during this transition, and that an increase in the accretion rate leads to
+                                radiation pressure... </p>
+                            <div class="row home-post-footer">
+                                <div class="col-md-8">
+                                    <div class="home-post-meta"> <i class="fa fa-clock-o"></i> <a href="/calendar/en">
+                                            Dec 7, 2022 </a> <i class="fa fa-folder-open"></i> <a
+                                            href="/seminars/en">Seminars</a> <i class="fa fa-tags"></i> accretion discs,
+                                        AGN, and MHD </div>
+                                </div>
+                                <div class="col-md-4"> <a href="/seminars/en/2022/12/07/matsumoto.html"
+                                        class="btn btn-primary btn-block">Read more</a> </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-5"> <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#cat2" data-toggle="tab">News</a></li>
+                            <li><a href="#cat3" data-toggle="tab">Seminars</a></li>
+                            <li><a href="#cat4" data-toggle="tab">Uchu Forum</a></li>
+                            <li><a href="#cat5" data-toggle="tab">Conferences</a></li>
+                        </ul> <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active " id="cat2">
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/news/en/2020/12/01/press-release.html"><img class="media-object"
+                                            src="/assets/img/news//2020-12-01-press-release-thumb.jpg" width="100"
+                                            height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/news/en/2020/12/01/press-release.html">[Press release] The Cosmic
+                                                Neutrino Background: World's First Six-dimensional Simulations</a></h4>
+                                        <p> In this research, we solved the Vlasov-Poisson equations directly by running
+                                            our new high-precision numerical scheme for... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left" href="/news/en/2019/05/10/tanabata.html"><img
+                                            class="media-object" src="/assets/img/news//tanabata-2019-01-thumb.jpg"
+                                            width="100" height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="/news/en/2019/05/10/tanabata.html">11th
+                                                Tanabata Astronomy Lecture</a></h4>
+                                        <p> ... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/news/en/2018/05/03/shinkan-bbq.html"><img class="media-object"
+                                            src="/assets/img/news//2018-05-03-shinkan-bbq-3-thumb.jpg" width="100"
+                                            height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/news/en/2018/05/03/shinkan-bbq.html">Theoretical and
+                                                Observational Astrophysics Joint New Members BBQ</a></h4>
+                                        <p> On the 3rd of May 2018, the Theoretical Astrophysics and the Observational
+                                            Astrophysics groups organized a barbeque... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/news/en/2014/07/27/soubun-2014.html"><img class="media-object"
+                                            src="/assets/img/news//2014-07-27-Soubun-thumb.png" width="100" height="100"
+                                            alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="/news/en/2014/07/27/soubun-2014.html">38th
+                                                National High School Cultural Festival in Ibaraki "Ibaraki Sobun
+                                                2014"</a></h4>
+                                        <p> On July 28, 2014, Yu Komatsu was interviewed by students of the newspaper
+                                            division of the 38th... </p>
+                                    </div>
+                                </div> <a href="/news/en" class="btn btn-default pull-right">Read more articles</a>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="tab-pane " id="cat3"> <a href="/seminars/en"
+                                    class="btn btn-default pull-right">Read more articles</a>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="tab-pane " id="cat4"> <a href="/uchu_forum/en"
+                                    class="btn btn-default pull-right">Read more articles</a>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="tab-pane " id="cat5">
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/conferences/ccs/en/2022/11/04/tentaikeisei.html"><img
+                                            class="media-object"
+                                            src="/assets/img/conferences//colliding-galaxies-thumb.jpg" width="100"
+                                            height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/conferences/ccs/en/2022/11/04/tentaikeisei.html">Formation of
+                                                Astrophysical Objects 2022</a></h4>
+                                        <p> This workshop aims to provide an opportunity to exchange views and share
+                                            information about the current status... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/conferences/domestic/en/2022/08/08/galaxy-igm.html"><img
+                                            class="media-object" src="/assets/img/conferences//galaxy-igm-thumb.jpg"
+                                            width="100" height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/conferences/domestic/en/2022/08/08/galaxy-igm.html">Galaxy-IGM
+                                                workshop 2022</a></h4>
+                                        <p> The Galaxy-IGM Workshop will be held again this year. For the past 10 years,
+                                            the Galaxy-IGM Workshop... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/conferences/ccs/en/2021/10/22/tentaikeisei.html"><img
+                                            class="media-object"
+                                            src="/assets/img/conferences//colliding-galaxies-thumb.jpg" width="100"
+                                            height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/conferences/ccs/en/2021/10/22/tentaikeisei.html">Formation of
+                                                Astrophysical Objects 2021</a></h4>
+                                        <p> This workshop aims to provide an opportunity to exchange views and share
+                                            information about the current status... </p>
+                                    </div>
+                                </div>
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <div class="media"> <a class="pull-left"
+                                        href="/conferences/domestic/en/2021/08/16/galaxy-igm.html"><img
+                                            class="media-object" src="/assets/img/conferences//galaxy-igm-thumb.jpg"
+                                            width="100" height="100" alt="image"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a
+                                                href="/conferences/domestic/en/2021/08/16/galaxy-igm.html">Galaxy-IGM
+                                                workshop 2021</a></h4>
+                                        <p> The Galaxy-IGM Workshop will be held again this year. For the past 10 years,
+                                            the Galaxy-IGM Workshop... </p>
+                                    </div>
+                                </div> <a href="/conferences/en" class="btn btn-default pull-right">Read more
+                                    articles</a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section> <!-- Recent work section -->
+        <section id="home-works">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="section-title text-center">Recent Work</h2>
+                    </div>
+                </div>
+                <div class="row"> </div>
+            </div>
+        </section>
+        <aside id="footer-widgets">
+            <div class="container">
+                <div class="row"> <!-- Sitemap -->
+                    <div class="col-md-4">
+                        <h3 class="footer-widget-title">Sitemap</h3>
+                        <ul class="list-unstyled three_cols"> <!-- Just one for conferences -->
+                            <li><a href="/members/en">Members</a></li> <!-- Just one for conferences -->
+                            <li><a href="/achievements/en">Achievements</a></li> <!-- Just one for conferences -->
+                            <li><a href="/featured/en">Featured</a></li> <!-- Just one for conferences -->
+                            <li><a href="/news/en">News</a></li> <!-- Just one for conferences -->
+                            <!-- Just one for conferences -->
+                            <li><a href="/contact/en">Contact</a></li> <!-- Just one for conferences -->
+                            <li><a href="/information/en">Information</a></li> <!-- Just one for conferences -->
+                            <li><a href="/uchu_forum/en">Uchu Forum</a></li> <!-- Just one for conferences -->
+                            <li><a href="/seminars/en">Seminars</a></li> <!-- Just one for conferences -->
+                            <li><a href="/conferences/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/calendar/en">Calendar</a></li> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <li><a href="/projects/#astro/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/projects/#hpc/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/projects/#dev/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/projects/#cab/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/projects/#med/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/projects/#past/en"></a></li> <!-- Just one for conferences -->
+                            <li><a href="/admission/en">Graduate School</a></li> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <li><a href="/alumni/en">Alumni</a></li> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <!-- Just one for conferences --> <!-- Just one for conferences -->
+                            <li><a href="/resources/en">Resources</a></li>
+                        </ul>
+                    </div> <!-- Recent Posts -->
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="footer-widget-title">Recent Posts</h3>
+                            <div class="media">
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <a class="pull-left" href="/seminars/en/2022/12/07/matsumoto.html"><img
+                                        class="media-object" src="/assets/img/seminars//Ryoji_Matsumoto.jpg" width="75"
+                                        height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="/seminars/en/2022/12/07/matsumoto.html">State
+                                            Transitions and Time Variations of Black Hole Accretion Flows</a></h4>
+                                    <small> Dec 7, 2022 </small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <a class="pull-left" href="/conferences/ccs/en/2022/11/04/tentaikeisei.html"><img
+                                        class="media-object" src="/assets/img/conferences//colliding-galaxies-thumb.jpg"
+                                        width="75" height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a
+                                            href="/conferences/ccs/en/2022/11/04/tentaikeisei.html">Formation of
+                                            Astrophysical Objects 2022</a></h4> <small> Nov 4, 2022 </small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <!-- location of image files is sometimes in subdirectories. Eventually they all will be. -->
+                                <a class="pull-left" href="/conferences/domestic/en/2022/08/08/galaxy-igm.html"><img
+                                        class="media-object" src="/assets/img/conferences//galaxy-igm-thumb.jpg"
+                                        width="75" height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a
+                                            href="/conferences/domestic/en/2022/08/08/galaxy-igm.html">Galaxy-IGM
+                                            workshop 2022</a></h4> <small> Aug 8, 2022 </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Recent Achievements -->
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="footer-widget-title">Recent Work</h3>
+                            <div class="row"> </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </aside> <!-- footer-widgets --> <!-- Copyright -->
+        <footer id="footer">
+            <p>&copy; 2023 <a href="/home/en">Computational Microscopy Group</a>, <a
+                    href="http://www.ccs.tsukuba.ac.jp/eng/">Center for Nanoanalysis and Electron Microscopy</a>, <a
+                    href="http://www.tsukuba.ac.jp/english/">University of Erlangen-Nürnberg</a>. All rights reserved.
+            </p>
+        </footer>
+    </div> <!-- boxed -->
+    <div id="back-top"> <a href="#header"><i class="fa fa-chevron-up"></i></a> </div> <!-- Scripts -->
+    <script src="/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- See i fyou can find newer versions for some of the below -->
+    <script src="/assets/js/jquery.cookie.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/lightbox-2.6.min.js"></script>
+    <script src="/assets/js/holder.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/styleswitcher.js"></script>
+    <script src="/assets/js/syntax/shCore.js"></script>
+    <script src="/assets/js/syntax/shBrushXml.js"></script>
+    <script src="/assets/js/syntax/shBrushJScript.js"></script>
+    <script src="/assets/js/membersform.js"></script>
+    <script src="/assets/js/get_nth_weekday.js"></script>
+    <script src="/assets/js/uchu_forum_form.js"></script>
+    <script src="/assets/js/parallax.js"></script>
+    <script type="text/javascript"> SyntaxHighlighter.all() </script> <!-- Tipuesearch -->
+    <script src="/assets/tipuesearch/tipuesearch.min.js"></script> <!-- Tipue search -->
+    <script> $(document).ready(function () { $('#tipue_search_input').tipuesearch(); }); </script>
+</body>
+
+</html>

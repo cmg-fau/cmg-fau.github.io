@@ -1,0 +1,23 @@
+/*-----------------------------------------------------------------------------------*/
+/* Navigation: Including nav Elements in all regions: Main, Skiplinks, Overlays, Widgets,..
+/*             But not: Breadcrumb, Social media icons, hero, gallerys and styling elements 
+/*-----------------------------------------------------------------------------------*/
+
+// Allgemein Nav
+@import "menu";
+
+// Hauptmenu
+@import "mainmenu";
+
+
+// Submenus und Page Menu
+@import "subnav";
+
+// Top-Links
+@import "portalmenus";
+
+// Allgemeine Breadcrumb-Klassen
+@import "breadcrumb";
+
+//Helpermenus
+@import "helpermenus";

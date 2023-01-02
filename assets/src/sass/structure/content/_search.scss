@@ -1,0 +1,313 @@
+/*-----------------------------------------------------------------------------------*/
+/* Search page
+/*-----------------------------------------------------------------------------------*/
+
+.search-result {
+	margin-bottom: 11px;
+	
+	    .search-row {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@media (min-width: $screen-xs) {
+		    flex-wrap: nowrap;
+		    column-gap: $fau-gutter-width;
+		}
+		.searchresult-image {
+		    width: 100vw;
+		    text-align: center;
+		    padding: 0;
+		    margin-left: calc(-#{$fau-gutter-width} / 2);
+		    margin-right: calc(-#{$fau-gutter-width} / 2);
+		    // Auf kleinem Display setze die Bilder nahtlos an den Rand
+
+		    @media (min-width: $screen-xs) {
+			width: auto;
+			min-width: 220px;
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 0;		
+		    }
+		    @media (min-width: $screen-xl) {
+			min-width: 320px;
+		    }
+		    img {
+			width: 100%;
+			text-align: center;
+			@media (min-width: $screen-sm) {
+			    width: 220px; 
+			}
+			@media (min-width: $screen-xl) {
+			    width: 320px;
+			}
+		     }  
+		}
+		.searchresult-imagetext {
+		    width: 100%;
+
+		    @media (min-width: $screen-xs ) {
+			p {
+			    display: inline;
+			}
+		    }
+
+		}
+
+		.fullwidthregion {
+		    width: 100%;
+		}
+	    }
+	
+	
+	article {
+	    @extend .col-sm-12;
+	}
+
+
+	.search-meta {
+		padding: 5px 0;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		color: var(--color-Text);
+		display: block;
+		font-family: $fontStack;
+		
+		.post-meta-category:before {
+		    @extend .fa;
+		    @extend .fa-tag;
+		}
+		.post-meta-date:before {
+		    @extend .fa;
+		    @extend .fa-calendar;
+		}
+		.post-meta-event:before {
+		    @extend .fa;
+		    @extend .fa-calendar-o;
+		}
+		.post-meta-kontakt:before {
+		    @extend .fa;
+		    @extend .fa-user;
+		}
+		.post-meta-defaulttype:before {
+		    @extend .fa;
+		    @extend .fa-bookmark;
+		}
+		.post-meta-news:before {
+		    @extend .fa;
+		    @extend .fa-newspaper-o;
+		}
+		.post-meta-news-external:before {
+		    @extend .fa;
+		    @extend .fa-link;
+		}
+		
+		.post-meta-attachment:before {
+		    @extend .fa;
+		    @extend .fa-file;
+		}
+		
+		.download:before {
+		    @extend .fa;
+		    @extend .fa-download;
+		}
+		.dateityp {
+		    text-transform: uppercase;
+		}
+	}
+	h3 .ext-link,  
+	h2 .ext-link {
+		@include inline-block;
+		padding-right: 15px;
+		
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+		
+	}
+
+	.download,
+	.post-meta-date,
+	.post-meta-attachment,
+	.post-meta-news,
+	.post-meta-news-external,
+	.post-meta-category,
+	.post-meta-defaulttype, 
+	.post-meta-kontakt {
+	    margin-right: 10px;
+	}
+	.content-person {
+	    border: none;
+	}
+	
+}
+
+
+.widget_search,
+.searchform-content {	
+  
+	.search-text {
+	    label {
+		@extend .screen-reader-text;
+	    }
+	    input[type="text"] {
+		@include border-radius(20px);
+		@include px2rem($font-size-herosearch);
+		border: 1px solid  var(--color-primary-ci-hell);
+		max-width: min(25rem, 90%);
+		padding: 0.5rem 7rem 0.5rem 2rem;
+		height: inherit;
+		margin: 0;
+		width: 100%;
+		@media (min-width: $screen-xs) {
+		    width: 25rem;
+		}
+		
+		
+		background: var(--color-primary-ci-hell);
+		color: var(--color-primary-ci-hell-kontrast);
+
+		&:active,
+		&:target,
+		&:focus {
+			background-color: var(--color-primary-ci-hell2);
+			color: var(--color-primary-ci-hell2-kontrast);
+			outline-style: none;
+                        
+                       
+		}
+                &:focus::placeholder {
+                    color: var(--color-primary-ci-hell2-kontrast);
+                }
+	    }
+            input[type="text"]::placeholder {
+                color: var(--color-primary-ci-hell-kontrast);
+            }
+            
+	    input[type="submit"] {
+		@include border-radius(20px);
+		@include px2rem($font-size-herosearch);
+		    border: 1px solid var(--color-primary-ci-hell);
+		    @include buttoncolor();
+		    padding: 0.5rem 1rem;
+		    height: inherit;
+		    margin-left: -5rem;
+	    }
+	    .searchicon {
+		@extend .svg-icon;
+		@include svg-icon-sizes(1.1rem);
+		background-image: svg-icon-search(#fff, 16, 16);
+		margin-right: -2rem;
+		margin-left: 1rem;
+	    }
+	}
+
+	.search-radio-label {
+		float: left;
+		margin-right: 20px;
+
+		input {
+			margin-top: -4px;
+			margin-right: 3px;
+		}
+	}
+
+	.filter {
+	    margin-top: 0.5rem;
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content : flex-start;
+	    align-items : center;
+	    
+	    div {
+		@include inline-block();
+		text-align: left;		
+		
+		label {
+		    @include inline-block();
+		    margin: 0 1rem 0 0.5rem;
+		    padding: 0;
+		    min-width: inherit;
+		}
+		input[type="checkbox"] {
+		    margin: 0;
+		    width: 1rem;
+		    height: 1rem;
+		    border: 1px solid #bbb;
+		    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+		}
+		
+	    }
+	}
+
+}
+.search-contenttry,
+.searchpage-content {
+    form {
+	    border: none;
+	    
+	    @include border-radius(4px);
+	    margin: 1rem 0;
+	    padding: 1rem;
+	    .sidebar-single & {
+		padding: 20px 0;
+	    }
+	    &:hover {
+		box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	    }
+	}
+	
+}
+.widget_search {
+
+    .search-text {
+        input[type="text"], 
+        input[type="submit"] {
+	    @include px2rem($font-size-sidebar);
+	}
+        
+        input[type="text"] {
+            width: 15rem;
+            padding-right: 5rem;
+        }
+         input[type="submit"] {
+	   margin:0 0 0 -4rem;
+	}
+    }
+}
+
+.search-results {
+ .nav-links {
+	    margin: 20px 0;
+	    @include inline-block();
+
+	    a {
+		
+		@include defaultlinkstyle();	
+		text-decoration: none;
+		@include buttonstyle();
+		@include px2rem($font-size-pagination-links);
+		
+		&:hover, 
+		&:focus {
+			text-decoration: underline;
+		}
+	    }
+
+	    
+	    .dots {
+		@include buttonstyle();
+	    }
+	    .current {
+		@include ghostbutton();
+		@include px2rem($font-size-pagination-links);
+	    }
+
+	    .prev, 
+	    .next {
+		    padding-left: 1rem;
+		    padding-right: 1rem;
+	    }
+
+ }
+}

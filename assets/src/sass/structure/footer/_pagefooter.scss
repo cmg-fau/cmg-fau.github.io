@@ -1,0 +1,121 @@
+/*-----------------------------------------------------------------------------------*/
+/* Pagefooter
+/*-----------------------------------------------------------------------------------*/
+
+#footer {
+	background: var(--color-footer-bg);
+	color: var(--color-footer-text);
+	padding: 0 0 20px 0;
+	
+	
+	li {
+	    @include px2rem($font-size-base);
+	    @media (min-width: $screen-sm) {
+		@include px2rem($font-size-footer);
+	    }
+	}
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	
+	a:hover, a:focus {
+	    text-decoration: underline;
+	}
+	@media (min-width: $screen-sm) {
+	    padding: 20px 0;
+	}
+	
+	
+	p, address {
+	    color: var(--color-footer-text);
+	    @media (min-width: $screen-sm) {
+		@include px2rem($font-size-footer);
+	    }
+
+	}
+	.footer-logo {
+	    .fau-logo-footer {
+		  fill: $color-footer-text;
+		  color: $color-footer-text;
+		  --fau-logo-display-name: none;
+	    }
+	    &.fau {
+			overflow: hidden;
+			margin-top: 0.5rem;
+	    }
+	}
+	.footer-address {
+	    padding-top: 1rem;
+	    @media (min-width: $screen-xs) {
+			padding-top: 0;
+	    }
+	}
+
+	.footer-meta {
+	   text-align: left;
+	   margin-top: 0.7rem;
+	   @media (min-width: $screen-sm) {
+	       text-align: right;
+		   margin-top: 0;
+	   }
+	   
+	   .svg-socialmedia {
+	       margin: 1rem 60px 0 0;
+	       @media (min-width: $screen-sm) {
+			   margin: 1rem;
+	       }
+	       ul {
+			   margin: 0;
+	       }
+	   }
+	   
+       }
+       
+       /* Footer Navigation */
+	#footer-nav {
+		@include no-list;
+		text-align: left;
+
+		@media (min-width: $screen-sm) {
+		    text-align: right;
+		}
+
+		li {
+			@include no-list;
+			display: inline;
+			background: none;
+			margin: 0;
+			a {
+			    padding: 12px 12px 12px 0;
+			    color: var(--color-footer-text);
+			    
+			}
+			
+			
+		}
+		li:first-child {
+		    margin-left: 0px;
+		}
+	}
+       
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    
+    .footer-logo {
+		flex: 0 0 240px;
+    }
+    .footer-address {
+		flex: 1 1 210px;
+		margin-right: 10px;
+    }
+    .footer-meta {
+		flex: 1 1 250px;
+    }
+}

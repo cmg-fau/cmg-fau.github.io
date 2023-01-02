@@ -1,0 +1,74 @@
+/*-----------------------------------------------------------------------------------*/
+/* Meta region in top   fauorg-home
+/*-----------------------------------------------------------------------------------*/
+
+#meta {
+	@include placeholder(#fff);
+	background: var(--color-StandardHellgrau);
+	color: var(--color-MetaTextDefault);
+	z-index: 100;
+	position: relative;
+
+	input,
+	li {
+		@include px2rem($font-size-meta);
+	}
+
+	@media (min-width: $screen-sm) {
+		z-index: 110; // Änderung notwendig, damit das Such-Flyout nicht unter dem #header liegt
+		height: auto;
+		padding: inherit;
+	}
+
+    .header-row {
+        justify-content: space-between;
+        align-items: center;
+        min-height: 50px;
+	
+        padding: 4px 0;
+        @media (min-width: $screen-sm) {
+            padding: 5px 0;
+        }
+
+        &:after {
+            content: '';
+            width: 52px;
+        }
+	
+	.wp-custom-logo & {
+	    height: 50px;
+	}
+    }
+}
+
+.meta-widget {
+	display: inline-block;
+	margin: 5px 30px 5px 20px;
+    height: 1.875rem;
+}
+
+#headerwrapper {
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    transition: box-shadow 0.2s;
+
+    .admin-bar & {
+        top: $wordpress-adminbar-bigheight;
+
+        @media (min-width: $wordpress-adminbar-break) {
+            top: $wordpress-adminbar-smallheight;
+        }
+    }
+
+    body:not([data-scroll='0']) & {
+        background-color: var(--color-white);
+        @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+    }
+    body.nav-toggled & {
+        top: unset;
+        @media (min-width: $screen-sm) {
+            top: 0;
+        }
+    }
+}

@@ -1,0 +1,245 @@
+/*-----------------------------------------------------------------------------------*/
+/* Links
+/*-----------------------------------------------------------------------------------*/
+
+a {
+	color: var(--color-links);
+	text-decoration: none;
+        
+      
+	&:active,
+	&:hover, 
+	&:focus {
+		text-decoration: underline;
+	}
+
+	p &, 
+	li &, 
+	table &, 
+	.accordion-inner & {
+		text-decoration: underline;
+	}
+	
+	li.search-result & {
+	    text-decoration: none;
+
+	    &:hover, 
+	    &:focus {
+		text-decoration: underline;
+	    }
+	    
+	}
+
+
+	table &:hover, 
+	table &:focus,
+	&.tag-cloud-link,
+	#hero & {
+		text-decoration: none;
+	}
+	
+	&.tag-cloud-link:hover,
+	&.tag-cloud-link:focus,
+	#hero &:hover, 
+	#hero &:focus {
+		text-decoration: underline;
+	}
+	
+	
+	
+}
+
+#footer .ext-link, 
+#hero .ext-link, 
+#nav .ext-link {
+	padding-right: 0 !important;
+	background-image: none !important;
+}
+
+
+
+//Special Links
+
+.top-link {
+	position: fixed;
+	bottom: 20px; 
+	right: 20px;
+	@include buttonstyle(4px);
+	display: none;
+
+}
+
+	    
+// Continue/Weiterlesen Link
+.continue {
+    margin-top: 0.5rem;
+    text-align: right;
+
+    .read-more-link {	
+	@include nextlink-ghostbutton();
+    }
+}
+	    
+// Additional link effects for Content
+main,
+.entry-content,
+.portalpage-content,
+.content-inline {
+
+    a{
+        @include styledcontentlink();
+	
+	&.news-image {
+	     @include defaultlinkstyle();
+	     svg, img {
+		 box-shadow: none; 
+		 padding: 0;
+	     }
+	}
+        svg,
+        img {
+            @include default-img();
+        }
+        
+    }
+    .socialmedia li,
+    .imagelink,
+    .person-info,
+    .contactlist,
+    address,
+    h1, h2, h3, h4, h5, h6 {
+        a {
+             @include defaultlinkstyle();
+             text-decoration: none;
+
+            &:active,
+            &:hover, 
+            &:focus {
+                    text-decoration: underline;
+            }
+        }
+    }
+    .widget {
+	    a {
+	       @include defaultlinkstyle();
+	    }
+	    h1, h2, h3, h4, h5, h6 {
+		   a {
+		    text-decoration: none;
+		   }
+	    }
+	
+    }
+    
+    
+    .nextlink-ghostbutton {
+	@include nextlink-ghostbutton();
+	
+    }
+    .prevlink-ghostbutton {
+	@include prevlink-ghostbutton();
+    }
+   
+    
+    figure > a,
+    a.media-img {
+	@include defaultlinkstyle();
+	display: inline-block;
+	// overflow: hidden;
+
+	img {
+	    @include default-img();
+	}
+	img.polaroid {
+	    @media (min-width: $screen-xs) {
+		padding: 5px;
+	    }
+	}
+	img.thickborder {
+	    border: 2px solid var(--color-ContentBorders);
+            @include border-radius(2px);
+	}
+	img.noshadow {
+	    box-shadow: none;
+	}
+
+    }
+    figure > a:hover,
+    figure > a:focus,
+    a.media-img:hover, 
+    a.media-img:focus {
+	img {
+	    border: 2px solid var(--color-content-links-underline);
+	    padding: 0;
+	}
+	img.polaroid {
+	    @media (min-width: $screen-xs) {
+		padding: 3px;
+	    }
+	}
+	img.thickborder {
+	    border: 2px solid var(--color-content-links-underline);
+	    @media (min-width: $screen-xs) {
+		padding: 2px;
+	    }
+	}
+	img.circle.rotate {
+	    transform: rotateZ(20deg);
+	    transition: transform .5s ease-in-out;
+	}
+    }
+
+    a.media-img.sizinglink {
+	overflow: hidden;
+	img {
+	    @media (prefers-reduced-motion: no-preference) and (min-width: $screen-xs) {
+		  transition: transform 1s;
+	    }
+	    object-fit: cover;		    
+	}
+	
+    }
+    a.media-img.sizinglink:hover, 
+    a.media-img.sizinglink:focus {
+	img {
+	    transform: scale(1.1);
+	    box-shadow: none;
+	    border: none;
+	    @media (min-width: $screen-xs) {
+		padding: 2px;
+	    }
+	}
+    }
+
+    
+    a.media-img.alignleft {
+	float: left;
+	clear: both;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	img {
+	    float: none;
+	    margin: 0;
+	}
+    }
+    a.media-img.alignright {
+	float: right;
+	clear: both;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	img {
+	    float: none;
+	    margin: 0;
+	}
+    }
+    a.media-img.aligncenter {
+	display: block;
+	margin: 0 auto 10px auto;
+	img {
+	    display: inline-block;
+	    margin: 0;
+	}
+    }
+}
+
+

@@ -1,0 +1,105 @@
+/*-----------------------------------------------------------------------------------*/
+/* Resets styles to base
+/*-----------------------------------------------------------------------------------*/
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+}
+[hidden],
+template {
+  display: none;
+}
+
+
+
+
+sub,
+sup {
+	position: relative;
+	font-size: 0.75rem;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+
+
+
+small {
+	font-size: 0.85rem;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+
+
+
+blockquote.pull-right {
+	float: right;
+	padding-right: 15px;
+	padding-left: 0;
+	border-right: 5px solid #eeeeee;
+	border-left: 0;
+}
+
+blockquote.pull-right p,
+blockquote.pull-right small {
+	text-align: right;
+}
+
+blockquote.pull-right small:before {
+	content: '';
+}
+
+blockquote.pull-right small:after {
+	content: '\00A0 \2014';
+}
+
+q:before,
+q:after {
+	content: "";
+}
+
+// Reset the box-sizing
+* {
+	@include box-sizing(border-box);
+}
+
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+

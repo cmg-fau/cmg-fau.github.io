@@ -1,0 +1,46 @@
+/*-----------------------------------------------------------------------------------*/
+/* Devider
+/*-----------------------------------------------------------------------------------*/
+hr {
+	position: relative;
+	clear: both;
+	background: var(--color-MainBackground);
+	border: none;
+	outline: none;
+	display: none;
+	
+	height: 1rem;
+	margin: 1rem 0;
+	
+	
+	@media (min-width: $screen-sm) {
+	    display: block;
+	    margin: 1rem 3rem 2rem;
+	    height: 1.5rem;	
+	}
+
+	
+	&.big,
+	.page-template-page-start &,
+	.home & {
+	   
+	    @media (min-width: $screen-sm) {
+		height: 60px;
+		margin-bottom: 10px
+	    }
+	}
+	@include box-shadow(0 10px 10px -10px var(--color-StandardHellgrau) inset);
+	
+	&.line {
+	    height: 1px;
+	    @include linear-gradient-three(transparent,var(--color-StandardHellgrau) 50%,transparent);  
+	}
+	&.line.big {
+	     margin-bottom: 60px
+	}
+}
+.page-template-page-start hr::after,
+.home hr::after {
+    top: 30px;
+    @include box-shadow(0 0 30px var(--color-StandardHellgrau));
+}

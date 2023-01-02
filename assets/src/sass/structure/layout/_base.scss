@@ -1,0 +1,88 @@
+/*-----------------------------------------------------------------------------------*/
+/* Layout: Base Structure
+/*-----------------------------------------------------------------------------------*/
+
+
+body {
+	margin: 0;
+	color: var(--color-Text);
+	background-color: var(--color-MainBackground);
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.35;
+}
+
+
+
+html, body, button {
+	font-family: $fontStack;
+	font-kerning:  none;
+}
+
+ html {
+      height: 100%;
+    // scroll-padding-top: 175px;
+    scroll-behavior: smooth;
+
+    
+  
+}
+
+
+
+
+/* Main surrounding grid */
+/* Wrap content in white */
+#pagewrapper {
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: var(--color-MainBackground);
+	position: relative;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	min-height: 100vh;
+	
+	footer {
+	    // normal
+	}
+	#hero {
+	    flex: 0 1;
+	}
+	#content {
+	    flex: 1;
+	    width: 100%;
+	    
+	 
+	}
+	footer {
+	    margin-top: auto;
+	}
+
+}
+
+
+
+
+
+
+.flyout-entries-full {
+     @extend .col-xs-12;
+}
+
+
+
+
+@media (max-width: $screen-sm) {
+	body {
+	//    overflow: hidden;
+	    padding: 0;
+	}
+}
+@media (max-width: $breakLG) {
+	body {
+		padding-top: 0;
+	}
+
+}

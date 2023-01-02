@@ -1,0 +1,43 @@
+/*-----------------------------------------------------------------------------------*/
+/* Content specials
+/*-----------------------------------------------------------------------------------*/
+
+
+// grid in content region
+@import "grid";
+
+// all content types
+@import "global";
+
+// Assistant Shortcode
+@import "assistant";
+
+// Organigramm Shortcode
+@import "organigramm";
+
+// Post
+@import "posts";
+
+
+// Event Items
+@import "event-items";
+
+// News Items
+@import "news-items";
+
+
+// Suchergebnisse
+@import "search";
+
+
+// Gallery
+@import "gallery";
+
+// Spalten aus Shortcodes
+@import "imagelink";
+
+// Comments
+@import "comments";
+
+// Tagclouds
+@import "tagclouds";

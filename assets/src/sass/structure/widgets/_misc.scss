@@ -1,0 +1,51 @@
+/*-----------------------------------------------------------------------------------*/
+/* All Widgets 
+/*-----------------------------------------------------------------------------------*/
+
+.widget {
+	margin-bottom: 0.7rem;
+	overflow-wrap: break-word;
+	@include px2rem($font-size-sidebar);
+	ul {
+	    margin: 0;
+	    padding: 0;
+	    
+	    ul {
+		margin: 0 0 0.7rem 0.5rem;
+	    }
+	}
+
+	
+	li {
+		@include px2rem($font-size-sidebar-listitem);	
+		list-style-type: none;
+		
+		a {
+                    padding: 0;
+                    text-decoration: none;
+		}
+		
+		a:hover, 
+                a:focus {
+			text-decoration: underline;
+		}
+		a:before {
+           
+		   @include svg-icon-place();
+		   background-image: svg-angle-right($color-content-links);
+		   color: var(--color-Default);
+
+	       }
+	}
+	
+	
+}
+
+
+span {
+    aside &,
+	#content .widget &,
+	#content .widget & {
+	      @include px2rem($font-size-sidebar);
+	}
+}

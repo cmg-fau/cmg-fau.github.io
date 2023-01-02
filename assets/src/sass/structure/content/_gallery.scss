@@ -1,0 +1,418 @@
+/*-----------------------------------------------------------------------------------*/
+/* Gallery in content 
+/*-----------------------------------------------------------------------------------*/
+@use "sass:math";
+
+
+.image-gallery {
+    margin: 10px -15px 20px -15px;
+    @media (min-width: $screen-sm-min) {
+	 margin: 10px 0 20px 0;
+    }
+    clear: both;
+    
+    figure {
+	img {
+	    width: 100%;
+	    height: auto;	
+	    box-shadow: none;
+	}
+	figcaption {
+	    @include px2rem($font-size-image-caption);
+	    padding: 5px;
+	}
+    }
+    figure {
+	img {  
+	    object-fit: cover;
+	    min-height: 100%;
+	    min-width: 100%;
+	    width: 100%;
+	    height: auto;
+	    max-width: none;
+	    max-height: none;
+
+	}
+
+    }
+    
+    
+    .grid {
+	$gapwidth: floor(math.div($grid-gutter-width, 2));
+	$figpadding: 5px;
+	$figwidth2: floor(math.div(($gapwidth + ($figpadding * 2)),2));
+	$figwidth3: floor(math.div((($gapwidth * 2) + ($figpadding * 2)),3));
+	$figwidth4: floor(math.div((($gapwidth * 3) + ($figpadding * 2)),4));
+	$figwidth5: floor(math.div((($gapwidth * 4) + ($figpadding * 2)),5));
+	
+	.flexgrid {
+	    display: flex; 
+	    flex-wrap: wrap; 
+	    gap: $gapwidth;
+	    
+	    figure { 
+		border: 1px solid var(--color-ContentBorders);
+		text-align: center;
+		height: auto;
+		overflow: hidden;
+		width: calc(33% - $figwidth3);
+		margin: 0;
+		padding: $figpadding;
+		
+		a {
+		    @include defaultlinkstyle();
+		    text-decoration: none;
+		}
+	
+	    }
+	    figure {
+		overflow: hidden;
+		
+		img {
+		    transition: transform 1s;
+		    object-fit: cover;		    
+		    min-height: 100%;
+		    min-width: 100%;
+		    width: 100%;
+		    height: auto;
+		    max-width: none;
+		    max-height: none;
+
+		}
+		:focus,
+		:hover {
+		    img {
+			transform: scale(1.1);
+			filter: grayscale(100%);
+		    }
+		}
+	    }
+
+	    
+	    
+	    &.two, 
+	    &.three,
+	    &.four, 
+	    &.five {
+		figure {
+		    padding: $figpadding;
+
+		}
+	    }
+	    &.two {	    
+		figure {
+		    
+		    width: calc(50% - $figwidth2);
+
+		}
+	    }
+	    &.three {
+		figure {
+		    width: calc(33% - $figwidth3);
+		}
+	    }
+	    &.four {
+		figure {
+		   width: calc(50% - $figwidth2);
+		    @media (min-width: $screen-sm) {
+			width: calc(25% - $figwidth4);
+		    }
+		}
+	    }
+	    &.five {
+		figure {
+		    width: calc(50% - $figwidth2);
+		    @media (min-width: $screen-sm) {
+			width: calc(20% - $figwidth5);
+		    }
+		}
+	    }
+	    
+	}
+	
+	
+	
+    }
+     &.nospace .grid {
+	.flexgrid {
+	    gap: 0;
+	    figure {
+		padding: 0;
+		width: 33%;
+		border: none;
+	    }
+	}
+	.flexgrid.two {	    
+		figure {
+		    
+		    width: 50%;
+
+		}
+	
+	}
+	.flexgrid.three {
+		figure {
+		    width: 33%;
+		}
+
+	}
+	.flexgrid.four {
+		figure {
+		   width: 50%;
+		    @media (min-width: $screen-sm) {
+			width: 25%;
+		    }
+		}
+
+	}
+	.flexgrid.five {
+		figure {
+		    width: 50%;
+		    @media (min-width: $screen-sm) {
+			width: 20%;
+		    }
+		}
+	
+	}
+    }
+    
+    
+    .gallery-slick {
+	figure,
+	.gallery-image-caption {
+	    text-align: center;
+	    @include px2rem($font-size-image-caption);
+	    padding: 5px;
+	}
+	.slick-slider {
+	    img {
+		margin: 0 auto;
+	    }
+	}
+	.slider-nav-width {
+	   width: 90%;
+	   width: calc(100% - 100px);
+	   margin: 20px auto 10px;
+	
+	    .slick-slide {
+		cursor: pointer;
+		max-height: 150px;
+		overflow: hidden;
+		margin-left: 5px;
+		margin-right: 5px;
+		height: auto;
+	
+		    
+		
+		img {
+		    object-fit: cover;
+		    aspect-ratio: 3 / 2;
+		}
+	    
+		
+	    }
+	   
+	    
+	    
+	}
+	.slider-nav-width.slick-dotted {
+	    margin-bottom: 30px;
+	}
+	
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		display: block;
+		height: 40px;
+		width: 40px;
+		line-height: 0px;
+		font-size: 0px;
+		cursor: pointer;
+		background: transparent;
+		color: transparent;
+
+
+		top: 75%;
+		@include transform-translate(0, -75%);
+
+		@media (min-width: $screen-xs) {
+			top: 50%;
+			@include transform-translate(0, -50%);
+		}
+
+		padding: 0;
+		border: none;
+		outline: none;
+
+		
+		&:hover,
+		&:focus {
+			outline: none;
+			background: transparent;
+			color: var(--color-button-bg);
+
+			&:before {
+				 color: var(--color-button-hover-bg);
+			}
+		}
+
+		
+		&:before {
+			font-size: 40px;
+			line-height: 1;
+			color: var(--color-button-bg);
+			text-shadow: 0 0 1px var(--color-button-text);
+
+		}
+		
+
+
+	}
+
+	.slick-prev {
+		left: -40px;
+
+		[dir="rtl"] & {
+			left: auto;
+			right: -40px;
+		}
+
+		@media (min-width: $break-1360) {
+			left: -50px;
+			[dir="rtl"] & {
+				left: auto;
+				right: -50px;
+			}
+		}
+
+
+		&:before {
+			@extend .fa;
+			@extend .fa-chevron-left;
+
+			[dir="rtl"] & {
+				@extend .fa-chevron-right;
+			}
+		}
+
+	}
+
+	.slick-next {
+		right: -40px;
+
+		[dir="rtl"] & {
+			left: -40px;
+			right: auto;
+		}
+
+		@media (min-width: $break-1360) {
+			right: -50px;
+			[dir="rtl"] & {
+				left: -50px;
+				right: auto;
+			}
+		}
+
+
+		&:before {
+			@extend .fa;
+			@extend .fa-chevron-right;
+
+			[dir="rtl"] & {
+				@extend .fa-chevron-left;
+			}
+		}
+
+	}
+
+
+	.slick-startstop {
+		position: absolute;
+		display: block;
+		top: 20px;
+		right: 0px;
+
+		@media (min-width: $screen-xxs) {
+			top: 0px;
+			// bottom: 0;
+		}
+		@media (min-width: $screen-xs) {
+			top: 20px;
+			bottom: inherit;
+		}
+		@media (min-width: $screen-md) {
+			top: 5px;
+		}
+
+		background: $colorCopyrightBackground;
+		color: $colorCopyright;
+		@include px2rem($font-size-hero-slider-copyright);
+		margin: 0;
+		padding: 1px 4px;
+		border: none;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			background: #000;
+			transition-timing-function: ease;
+			text-decoration: underline;
+		}
+
+		.no-js & {
+			display: none;
+		}
+	}
+	
+	
+	
+	.slick-dots {
+	    position: absolute;
+	    display: block;
+	    width: 100%;
+	    padding: 0;
+	    margin: 15px auto 15px auto;
+	    list-style: none;
+	    text-align: center;
+	    li {
+
+		position: relative;
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin: 0.2rem 0.5rem;
+		padding: 0;
+		cursor: pointer;
+		
+		button {
+		    
+		    display: block;
+		    width: 1.5rem;
+		    height: 1.5rem;
+		    cursor: pointer;
+		    border-radius: 50%;
+		    padding: 0;
+		    color: var(--color-primary-ci-hell-kontrast);
+		    background-color: var(--color-primary-ci-hell);
+		    
+		    border: 0;
+		    outline: none;
+
+		    &:hover, 
+		    &:focus {
+			color: var(--color-button-hover-text);
+			background-color: var(--color-button-hover-bg);
+		    }
+  
+		}
+		&.slick-active button {
+		    color: var(--color-button-hover-text);
+		    background-color: var(--color-button-hover-bg);
+		}
+
+	    }
+	}
+    }
+   
+    
+}

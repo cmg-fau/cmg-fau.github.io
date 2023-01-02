@@ -1,0 +1,40 @@
+/*-----------------------------------------------------------------------------------*/
+/* Social Media Widget
+/*-----------------------------------------------------------------------------------*/
+#social {
+	background: var(--color-StandardHellgrau);
+	margin: 0;
+	padding: 20px 0;
+	    
+	    
+	.textwidget, 
+	p, 
+	h3#socialmediatitle,
+	div h3:first-child,
+	h2  {
+		padding-top: 0;
+	}
+	h2, 
+	h3#socialmediatitle,
+	div h3:first-child,
+	p.headline {
+	    @include px2rem($font-size-h2-socialmedia);
+	    padding: 0;
+	    min-height: 50px;
+	    display: block;
+	}
+	ul.social li {
+	    width: 50%;
+	    @media (min-width: $screen-sm) {
+		 width: 100%;
+	    }
+	}
+
+	
+	@media (min-width: $screen-sm) {
+	    padding: 20px 0;
+	    margin-top: 30px;
+	}
+}
+
+

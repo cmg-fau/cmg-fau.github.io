@@ -1,0 +1,59 @@
+/*-----------------------------------------------------------------------------------*/
+/* Global content definitions
+/*-----------------------------------------------------------------------------------*/
+@use "sass:math";
+
+#content {    
+    .container {
+	position: relative;
+    }
+    main {
+	
+
+	:target {
+	     scroll-margin-top: var(--js-fixed-header-height, $scroll-target-offset);  
+	     padding-top: 2rem;
+     
+	     
+	     .admin-bar & {	 
+		 padding-top: calc(2rem + $wordpress-adminbar-bigheight);
+		 @media (min-width: $wordpress-adminbar-break) {
+		      padding-top: calc(2rem + $wordpress-adminbar-smallheight);
+		 }
+
+	     }
+	}
+	
+
+
+	
+	@include px2rem($font-size-base);
+	color: var(--color-Text);
+	font-family: $fontStack;
+	padding-top: 0;
+	width: 100%;
+	
+	.sidebar-inline {
+	    @include px2rem($font-size-sidebar);
+	}
+	
+	.subtitle {
+	    margin: 1rem $fau-gutter-halfwidth;
+	    @media (min-width: $screen-sm) {
+		margin: 0 0 1rem 0;
+	    }
+	}
+    }
+   
+    
+    ul.page-print-actions {
+	display: none;
+	@media (min-width: $screen-sm) {
+	    top: 440px;
+	}
+    }
+
+    .portalmenu-oben {
+	margin-bottom: $fau-gutter-halfwidth;
+    }
+}

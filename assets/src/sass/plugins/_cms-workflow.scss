@@ -1,0 +1,85 @@
+/*-----------------------------------------------------------------------------------*/
+/* CSS Definitionen für das Plugin FAU_Person
+/* https://github.com/RRZE-Webteam/cms-workflow
+/*-----------------------------------------------------------------------------------*/
+
+/* Language switcher */
+.cms-workflow-widget {
+
+    @media (min-width: $screen-sm) {
+        position: relative;
+        left: inherit;
+        top: inherit;
+
+        ul {
+            min-width: 100px;
+            width: max-content;
+
+        }
+    }
+
+    .mlp_language_box {
+        @include inline-block();
+        background: var(--color-StandardHellgrau);
+
+        ul {
+            display: block;
+            padding: 0;
+            margin: 0;
+
+            @media (min-width: $screen-sm) {
+                display: flex;
+            }
+
+            li {
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                @include no-list();
+
+                a {
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: var(--color-Default);
+                    display: inline-block;
+                    height: 1.875rem;
+                    line-height: 30px;
+                    overflow: hidden;
+                    min-width: 40px;
+                    width: auto;
+                    background: #fff;
+                    padding: 0 5px;
+                    margin-right: 5px;
+
+                    @include border-radius(20px);
+
+                    &:before {
+                        z-index: 10;
+                        color: var(--color-MetaTextDefault);
+                        vertical-align: middle;
+                        margin-right: 0.25rem;
+
+                        @extend .fa;
+                        @extend .fa-language;
+                        @include px2rem(21);
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background: var(--color-MetaBackgroundLight);
+                        @include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+                    }
+                }
+
+                &.lang-current.current {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+

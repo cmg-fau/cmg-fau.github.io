@@ -1,0 +1,42 @@
+/*
+Anpassungen der Gestaltung an verschiedene Plugins
+*/
+
+.mejs-container {
+	width: auto !important;
+	background: transparent !important;
+}
+
+.mtli_attachment {
+	background-position: left center !important;
+	display: inline !important;
+}
+
+
+
+
+/* Social Media Buttons */
+.likebutton-dynamic, .tweetbutton-dynamic {
+	float: left;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+/* 
+* Verhindere, dass  MimeTypes Link Icons 
+* unerwünschte sichtbare Icons einbaut
+*/
+.meta-links, .meta-tools, .shariff {
+   
+    .wpel-icon {
+	display: none;
+    }
+}
+
+
+.shariff,
+.rrze-rsvp {
+    a {
+	 @include defaultlinkstyle();
+    }
+}

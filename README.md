@@ -2,7 +2,7 @@
 
 # Computational Microscopy Group Homepage
 
-This is the Jekyll-powered webpage repo for the Computational Microscopy Group at the The Center for Nanoanalysis and Electron Microscopy (CENEM), University of Erlangen-Nürnberg..
+This is the Jekyll-powered webpage repo for the Computational Microscopy Group at the The Center for Nanoanalysis and Electron Microscopy (CENEM), University of Erlangen-Nürnberg.
 
 The webpage is meant to give an overview of the members, research, and activities of the group.
 

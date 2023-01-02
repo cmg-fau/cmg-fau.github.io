@@ -1,0 +1,452 @@
+/*-----------------------------------------------------------------------------------*/
+/* CSS Definitionen für das Plugin FAU_Person
+/* https://github.com/RRZE-Webteam/fau-person/
+/*-----------------------------------------------------------------------------------*/
+@use "sass:math";
+
+
+
+
+.fau-person,
+.person {
+    .contactlist a,
+    .person-info a {
+		@include defaultlinkstyle();
+		text-decoration: none;
+		&:active,
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+    }
+    .person-info-more a.standard-btn {
+         @include ghostbutton();
+    }
+    
+   // &.liste-person a {
+   //      @include styledcontentlink();
+   // }
+    
+    
+    h3, h4, h5 {
+	a {
+	     text-decoration: none;
+	     &:hover, 
+	    &:focus {
+		    text-decoration: underline;
+		}
+	}
+	
+
+    }
+	h3, h3 span {
+	    @include px2rem($font-size-h3-small);
+		padding-bottom: 0;
+		padding-top: 5px;
+		aside &, #content .widget &, #content .widget & {
+			@include px2rem($font-size-h3-small);
+		}
+	}
+	
+	h4, h4 span {
+		padding-top: 0;
+		padding-bottom: 0;
+		
+	}
+	.connection {
+	    margin-top: 10px;
+	    ul {
+		margin-top: 5px;
+	    }
+	    li {
+		padding: 0;
+	    }
+	}
+	
+	
+	.archive & {
+	    .span6 {
+		width: calc(100% - 130px);	
+		
+		.person-info-description {
+		    padding-right: 10px;
+		}
+		.person-info-more {
+		    margin-right: 20px;
+		    text-align: right;
+		}
+	    }
+	    
+	} 
+        .fullname,
+        span[itemprop="honorificPrefix"], 
+        span[itemprop="honorificSuffix"] {
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+
+
+}
+
+
+
+
+.content-person {
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: block;
+	
+	@media (min-width: $screen-sm) {
+	    border: 1px solid var(--color-StandardHellgrau);
+	    margin: 0 0 10px 0;
+	    padding: 0 5px;
+        }
+	&.noborder {
+	    border: none;
+	}
+	&.background-fau, &.background-zuv {
+	    background: var(--color-zentral-ci-hell);
+	     a, li, p {
+		color: var(--color-zentral-ci-hell-kontrast);
+	    }
+	}
+	&.background-grau {
+	    background: var(--color-StandardHellgrau);
+	}
+	&.background-phil {
+	    background: var(--color-phil-ci-hell);
+	    a, li, p {
+		color: var(--color-phil-ci-hell-kontrast);
+	    }
+	}
+	&.background-med {
+	    background: var(--color-med-ci-hell);
+	     a, li, p {
+		color: var(--color-med-ci-hell-kontrast);
+	    }
+	}
+	&.background-nat {
+	    background: var(--color-nat-ci-hell);
+	     a, li, p {
+		color: var(--color-nat-ci-hell-kontrast);
+	    }
+	}
+	&.background-tf {
+	    background: var(--color-tf-ci-hell);
+	     a, li, p {
+		color: var(--color-phil-tf-hell-kontrast);
+	    }
+	}
+	&.background-rw {
+	    background: var(--color-rw-ci-hell);
+	    a, li, p {
+		color: var(--color-rw-ci-hell-kontrast);
+	    }
+	}
+
+	
+	li {
+
+		background-position: left 5px;
+	}
+	
+	
+	
+		
+	.accordion & {
+	    padding: 0;
+	    border: none;
+	    margin: 0 0 15px 0;
+	}
+
+}
+
+.person-info {
+	@include no-list;
+	margin-bottom: 10px;
+	overflow-wrap: break-word;
+	
+	li {
+		@include no-list;
+		background-image: none;
+		padding-left: 0px;
+		min-height: 20px;
+		background-repeat: no-repeat;
+		background-position: left center;
+		
+		
+		li {
+		    list-style: inherit;
+		    display: list-item;
+		}
+		ul  {
+		   
+		    li {
+			list-style-type: disc; 	   
+			
+			li {
+			    list-style-type: circle;
+			}
+		    }
+		}
+		ol  {
+		    li {
+			
+			list-style-type:  decimal; 	
+			li {
+			    list-style-type: circle;
+			}
+		    }
+		}
+
+	}
+	
+
+	
+	.person-info-position {
+	    font-weight: bold;
+	}
+	
+	.person-info-address {
+	    margin-top: 10px;
+	    padding-left: 0px;
+	}
+	
+	.person-info-description {
+	    margin-top: 10px;
+	    padding-left: 20px;
+	}
+	
+	a[itemprop="url"],
+	a[itemprop="email"] {
+	    overflow-wrap: anywhere;
+	}
+
+}
+
+
+
+
+
+.widget .person {
+    ul.person-info ul {
+		margin: 0 0 10px 25px;
+    }   
+    li.person-info-address,
+    li.person-info-description,
+    li.person-info-office {
+		display: block;
+		margin-top: 10px;
+    }
+    li.person-info-address {
+		margin-bottom: 5px;
+    }
+    
+    div[itemprop="contactPoint"] {
+		margin-top: 10px;
+    }
+    
+    h2, h3 {
+		padding-top: 0;
+		margin-top: 0;
+    }
+    
+}
+
+/* Strukturen Personenshortcode Content */
+.sidebar-single,
+.sidebar-inline,
+.startpage-sidebar,
+.portalpage-content,
+.content-inline {
+    .fau-person {
+	.contactlist,
+	p {
+	    a {
+		@include defaultlinkstyle();
+	    }
+
+	}
+    }
+    
+    
+	.person .row {
+	    display: flex;
+	    flex-wrap: wrap; 
+	    align-content: flex-start;
+	    margin-left: 0;
+	    margin-right: 0;
+	    
+	
+	    .person-default-thumb,
+	    .person-default {
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 0 5px;	
+	    }
+	    .person-thumb {
+		flex: 0 0 90px;
+		float: none;
+		order: 1;
+		margin: 0 15px 0 0;
+		padding: 5px 0;
+	    }
+	    .person-default,
+	    .person-sidebar,
+	    .person-default-thumb {
+		float: none;
+		order: 2;
+		flex-basis: min-content;
+
+	    } 
+
+
+	    .person-compact-thumb {
+		margin-left: 5px;
+		margin-right: 5px;
+		flex: 1 0;
+		@media (min-width: $screen-sm) {
+		    flex-basis: 350px; 
+		    padding: 5px;	
+		}
+		order: 1;
+		width: inherit;
+			
+	    }
+	    .person-default-more {
+		 float: none;
+		 flex: 1 1;
+		 order: 3;
+		 padding: 5px;
+	    }
+	    
+	    // removing old Bootstrap3 definitons
+	    .span1,
+	    .span3,
+	    .span6 {
+		float: none;
+		width: auto;
+		margin-left: inherit;
+		margin-right: inherit;
+	    }
+	}
+	.compactindex  .row .person-thumb {
+		order: 2;
+	 }
+    
+    
+}
+.fau-theme .fau-person.sidebar.thumb-size-large .row,
+.fau-theme .fau-person.sidebar .row  {
+    justify-content: flex-start;
+    
+    figure {
+	flex: 1 1;
+	
+	min-width: 90px;
+	width: calc(100% - 215px);
+	max-width: 150px;
+	
+	margin-right: ceil(math.div($grid-gutter-width, 2));    
+	padding: 0;
+	img {
+	    width: 100%;
+	    height: auto;
+	}
+    }
+    .person-sidebar {
+	flex: 1 0;
+	max-width: inherit;
+	min-width: 200px;
+	width: inherit;
+    }
+    
+    
+}
+
+
+
+/* Sidebar: Inline */
+.sidebar-inline {
+	
+    ul.person-info li {
+	    color: var(--color-Text);
+    }
+    li.person-info-address {
+		white-space: pre-line;
+    }
+    .content-person {
+		border: none;
+		margin: 0;
+		padding: 0;
+    }
+    .connection {
+		h3 {
+			@include px2rem($font-size-h4);
+		}
+    }
+}
+
+.sidebar-outline {
+    ul.person-info li {
+	    color: var(--color-Text);
+    }
+    li.person-info-address {
+		white-space: pre;
+    }
+    .content-person {
+	border: none;
+	margin: 0;
+	padding: 0;
+	
+    }
+}
+
+
+
+.search .search-result .content-person {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+
+// Personen-Page - 
+//  Entweder via SHortcode format="page" oder bei AUfruf des Endpoints aus single-person.php
+.fau-person {
+    .person-meta {
+	display: flex;	
+	.person-image {
+	    flex: 1 1 200px;
+	    order: 2;
+	    img {
+			width: auto;
+		}
+	    
+	}
+
+	.person-info {
+	    order: 1;
+	    flex: 1 0 220px;
+	    margin-right: 10px;
+	}
+	
+    }
+}
+
+.single-person .entry-content {
+    width: 100%;
+    padding-left:  floor(math.div($grid-gutter-width, 2));
+    padding-right: ceil(math.div($grid-gutter-width, 2));
+    
+    @media (min-width: $screen-sm) {
+	width: $container-sm;
+    }
+     @media (min-width: $screen-md) {
+	width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+	width: $container-lg;
+    }
+}

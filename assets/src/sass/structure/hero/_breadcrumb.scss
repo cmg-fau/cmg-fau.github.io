@@ -1,0 +1,30 @@
+/*-----------------------------------------------------------------------------------*/
+/* Breadcrumb
+/*-----------------------------------------------------------------------------------*/
+
+#hero {
+    .breadcrumbs {
+	    color: var(--color-hero-text);
+	    padding: 10px 0;
+	    position: relative;
+	    z-index: 10;
+
+	    @include px2rem($font-size-breadcrumb);
+
+	    span {
+		    padding: 0 5px;
+	    }	
+
+	    .single & .active {
+		display: none;	  
+	    }
+
+	    .breadcrumb_sitetitle {
+		@include px2rem($font-size-breadcrumb);
+	    }
+	    
+	    span.active {
+		display: none;
+	    }
+    }
+}

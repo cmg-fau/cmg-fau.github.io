@@ -1,0 +1,95 @@
+/*-----------------------------------------------------------------------------------*/
+/* CSS Definitionen für das Plugin FAU oEmbed
+/* https://github.com/RRZE-Webteam/fau-oembed/
+/*-----------------------------------------------------------------------------------*/
+.fau-oembed {
+    iframe {
+	aspect-ratio: 4 / 3;
+	max-width: 100%;
+	height: auto;
+    }
+}
+#content .fau-oembed {
+	margin-top: $fau-gutter-thirdwidth;
+	margin-bottom: $fau-gutter-halfwidth;
+
+	#social & {
+		margin: 0;
+	}
+	iframe {
+	    width: 100%;
+	}
+        button {
+            background-color: transparent;
+            padding: 0;
+            &:focus,
+            &:hover {
+                background-color: var(--color-button-hover-bg);
+                color:  var(--color-button-hover-text);
+            }
+        }
+}
+.social-media-widget {
+	 .fau-oembed {
+		iframe.defaultwidth {
+		    aspect-ratio: 9 / 6;
+		    width: 450px;
+		    height: 300px;
+		}
+	    }
+    }
+
+@media (min-width: $screen-md) {
+    .fau-theme.page-template-page-subnav {
+	.sidebar-inline .fau-oembed {
+	       iframe.defaultwidth {
+		    width: 200px;
+		    height: 150px;
+		}
+	}
+	.fau-oembed {
+	   iframe.defaultwidth {
+	       width: 617px;
+	       height: 346px;
+	   }
+	   iframe.slideshare.defaultwidth {
+	       height: 401px;
+	   }
+
+	}
+	
+    }
+
+    .fau-theme.page-template-default {
+	.sidebar-inline .fau-oembed {
+	       iframe.defaultwidth {
+		    width: 200px;
+		    height: 150px;
+		}
+	}
+       .fau-oembed {
+	   iframe.defaultwidth {
+	       width: 940px;
+	       height: 528px;
+	   }
+	   iframe.slideshare.defaultwidth {
+	       height: 567px;
+	   }
+       }
+
+    }
+    .page-template-page-portal,
+    .page-template-page-start {
+	.portalpage-sidebar {
+	    .fau-oembed {
+		iframe.defaultwidth {
+		    width: 293px;
+		    height: 200px;
+		}
+	    }
+	}
+    }
+    
+    
+}
+

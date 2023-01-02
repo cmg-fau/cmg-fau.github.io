@@ -1,0 +1,210 @@
+/*-----------------------------------------------------------------------------------*/
+/* Subnav in content
+/*-----------------------------------------------------------------------------------*/
+
+.sidebar-subnav {
+    header {
+	
+	margin-top: 0px;
+	border-top: 1px solid var(--color-primary-ci-hell);
+	@include px2rem($font-size-h3);
+	font-weight: bold;
+	
+	a {
+	    display: block;
+	    padding: 11px $fau-gutter-halfwidth;
+	    color: var(--color-submenu-toplevel-text);
+	    background: var(--color-submenu-toplevel-bg);
+
+	    &:hover,
+	    &:focus {
+	    	background-color: var(--color-submenu-hover-bg);
+		color: var(--color-submenu-hover-text);
+	    }
+	}
+    }
+}
+#subnav {
+	@include no-list;
+
+	ul, li {
+		@include no-list;
+	}
+
+	a {
+		text-decoration: none;
+		display: block;
+		@include px2rem($font-size-subnav-firstlevel);
+
+		padding: 6px $fau-gutter-halfwidth;
+		color: var(--color-submenu-currentlevel-text);
+		background: var(--color-submenu-currentlevel-bg);
+
+		&:hover,
+		&:focus {
+			background-color: var(--color-submenu-hover-bg);
+			color: var(--color-submenu-hover-text);
+		}
+	}
+
+	ul {
+		display: none;
+	}
+
+	> li {
+		border-bottom: 1px solid #fff;
+	}
+
+	.current_page_item,
+	.current_page_ancestor {
+		a {
+			color: var(--color-submenu-sublevel-text);
+			background-color: var(--color-submenu-sublevel-bg);
+			border: none;
+
+			&:hover,
+			&:focus {
+			    background-color: var(--color-submenu-hover-bg);
+			    color: var(--color-submenu-hover-text);
+			}
+		}
+
+		> ul {
+			display: block;
+		}
+
+		> a {
+			font-weight: bold;
+		}
+	}
+
+	li li {
+	    a {
+		padding-left: 1.5rem;
+	    }
+	    li {
+		a {
+		    padding-left: 2.3rem;
+		    @include px2rem($font-size-subnav-sublevel);
+		}
+		li {
+		    @include px2rem($font-size-subnav-sublevel);
+		    a {
+			padding-left: 3.1rem;
+		    }
+		    li {
+			a {
+			    padding-left: 4rem;
+			}
+			 li {
+			    a {
+				padding-left: 4.5rem;
+			    }
+			}
+		    }
+		    
+		}
+
+	    } 
+	}
+
+
+
+	
+	
+	
+	li .current_page_item,
+	li .current_page_ancestor {
+		a {
+		    color:  var(--color-submenu-active-text);
+		    background: var(--color-submenu-active-bg);
+		}
+
+		li {
+			a:hover,
+			a:focus {
+			   background-color: var(--color-submenu-hover-bg);
+			   color: var(--color-submenu-hover-text);
+			}
+		}
+	}
+
+	li .current_page_ancestor .current_page_item a,
+	li li .current_page_ancestor a {
+		background: var(--color-submenu-currentpage-bg);
+		color: var(--color-submenu-currentpage-text);
+
+	}
+
+	li li li li a,
+	li li li li.current_page_item a {
+		background: var(--color-primary-dunkler);
+		color: var(--color-primary-dunkler-kontrast);
+	}
+	li.private-page,
+	li.protected-page {
+	    a:after {
+		    @extend .svg-icon;
+		    @include svg-icon-sizes(1.1rem);
+		    background-image: svg-icon-lock($color-submenu-sublevel-text, 16, 16);
+		    margin-left: 5px;
+		    margin-top: -5px; 
+	    }
+	    a:hover,
+	    a:focus {
+		&:after {
+		    background-image: svg-icon-lock($color-submenu-active-text, 16, 16);
+		}
+	    }
+	}
+	li.private-page.current_page_item,
+	li.private-page.current_page_ancestor,
+	li.protected-page.current_page_item,
+	li.protected-page.current_page_ancestor {
+	    a:after {
+		background-image: svg-icon-lock($color-submenu-currentpage-text, 16, 16);
+	    }
+	}
+	li.captain-future,
+	li.draft-page {
+	    a:after {
+		    @extend .svg-icon;
+		    @include svg-icon-sizes(1.1rem);
+		    background-image: svg-icon-draft($color-submenu-currentlevel-text, 16, 16);
+		    margin-left: 5px;
+		    margin-top: -5px;
+	    }
+	    a:hover,
+	    a:focus {
+		&:after {
+		    background-image: svg-icon-draft($color-submenu-active-text, 16, 16);
+		}
+	    }
+	}
+	li.captain-future.current_page_item,
+	li.captain-future.current_page_ancestor,
+	li.draft-page.current_page_item,
+	li.draft-page.current_page_ancestor {
+	    a:after {
+		background-image: svg-icon-draft($color-submenu-currentpage-text, 16, 16);
+	    }
+	}
+
+
+
+
+}
+
+
+@media (max-width: $screen-sm - 1) {
+  	ul.menu {
+		margin-bottom: 10px;
+	}
+
+    #subnav {
+	ul {
+			margin-left: 0;
+			margin-right: 0;
+	}
+    }
+}
